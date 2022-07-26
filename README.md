@@ -1,1 +1,1 @@
-# storefront-componets
+# storefront-components
