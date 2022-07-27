@@ -18,7 +18,10 @@ export class UxBanners {
       <section class="ux-banners">
         {this.list.map(image => (
           <a class="link" href={null}>
-            <img class="img" src={image?.src} />
+            <picture>
+              <source srcSet={image?.srcDesktop} media="(min-width: 1024px)"/>
+              <img class="img" src={image?.srcMobile || image?.srcDesktop} alt={image?.alt} />
+            </picture>
           </a>
         ))}
       </section>
