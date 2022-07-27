@@ -1,9 +1,9 @@
-import { Component, Host, h, Prop, State } from '@stencil/core';
+import { Component, h, Prop, State } from '@stencil/core';
 import { imagesBanner } from './ux-banners-type';
 
 @Component({
   tag: 'ux-banners',
-  styleUrl: 'ux-banners.css'
+  styleUrl: 'ux-banners.scss'
 })
 export class UxBanners {
   @State() list: imagesBanner[];
