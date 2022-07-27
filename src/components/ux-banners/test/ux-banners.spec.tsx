@@ -1,18 +1,18 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { UxBanner } from '../ux-banner';
+import { UxBanners } from '../ux-banners';
 
 describe('ux-banner', () => {
   it('renders', async () => {
     const page = await newSpecPage({
-      components: [UxBanner],
+      components: [UxBanners],
       html: `<ux-banner></ux-banner>`,
     });
     expect(page.root).toEqualHtml(`
-      <ux-banner>
+      <ux-banners>
         <mock:shadow-root>
           <slot></slot>
         </mock:shadow-root>
-      </ux-banner>
+      </ux-banners>
     `);
   });
 });

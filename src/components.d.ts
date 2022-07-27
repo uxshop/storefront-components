@@ -6,32 +6,34 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface UxBanner {
+    interface UxBanners {
+        "imagesList": string;
     }
 }
 declare global {
-    interface HTMLUxBannerElement extends Components.UxBanner, HTMLStencilElement {
+    interface HTMLUxBannersElement extends Components.UxBanners, HTMLStencilElement {
     }
-    var HTMLUxBannerElement: {
-        prototype: HTMLUxBannerElement;
-        new (): HTMLUxBannerElement;
+    var HTMLUxBannersElement: {
+        prototype: HTMLUxBannersElement;
+        new (): HTMLUxBannersElement;
     };
     interface HTMLElementTagNameMap {
-        "ux-banner": HTMLUxBannerElement;
+        "ux-banners": HTMLUxBannersElement;
     }
 }
 declare namespace LocalJSX {
-    interface UxBanner {
+    interface UxBanners {
+        "imagesList"?: string;
     }
     interface IntrinsicElements {
-        "ux-banner": UxBanner;
+        "ux-banners": UxBanners;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "ux-banner": LocalJSX.UxBanner & JSXBase.HTMLAttributes<HTMLUxBannerElement>;
+            "ux-banners": LocalJSX.UxBanners & JSXBase.HTMLAttributes<HTMLUxBannersElement>;
         }
     }
 }
