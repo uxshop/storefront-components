@@ -15,15 +15,13 @@ export class UxBanners {
 
   render() {
     return (
-      <Host>
-        <section class="ux-banners">
-          {this.list.map(image => (
-            <a class="link" href={null}>
-              <img class="img" src={image?.src} />
-            </a>
-          ))}
-        </section>
-      </Host>
+      <section class="ux-banners">
+        {this.list.map(image => (
+          <a class="link" href={null}>
+            <img class="img" src={image?.src} />
+          </a>
+        ))}
+      </section>
     );
   }
 }
