@@ -19,8 +19,9 @@ export class UxBanners {
         {this.list.map(image => (
           <a class="link" href={null}>
             <picture>
+              <source srcSet={image?.srcMobile} media="(max-width: 1024px)"/>
               <source srcSet={image?.srcDesktop} media="(min-width: 1024px)"/>
-              <img class="img" src={image?.srcMobile || image?.srcDesktop} alt={image?.alt} />
+              <img class="img" src={image?.srcDesktop} alt={image?.alt} />
             </picture>
           </a>
         ))}
