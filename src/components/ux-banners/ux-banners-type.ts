@@ -1,4 +1,5 @@
 export interface imagesBanner {
-  src: string;
+  srcMobile?: string;
+  srcDesktop?: string;
   alt?: string;
 }
