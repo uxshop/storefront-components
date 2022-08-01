@@ -14,6 +14,10 @@ export namespace Components {
         "contentList": string;
         "side": sideType;
     }
+    interface UxVideo {
+        "contentList": string;
+        "src": string;
+    }
 }
 declare global {
     interface HTMLUxBannersElement extends Components.UxBanners, HTMLStencilElement {
@@ -28,9 +32,16 @@ declare global {
         prototype: HTMLUxTextImageElement;
         new (): HTMLUxTextImageElement;
     };
+    interface HTMLUxVideoElement extends Components.UxVideo, HTMLStencilElement {
+    }
+    var HTMLUxVideoElement: {
+        prototype: HTMLUxVideoElement;
+        new (): HTMLUxVideoElement;
+    };
     interface HTMLElementTagNameMap {
         "ux-banners": HTMLUxBannersElement;
         "ux-text-image": HTMLUxTextImageElement;
+        "ux-video": HTMLUxVideoElement;
     }
 }
 declare namespace LocalJSX {
@@ -41,9 +52,14 @@ declare namespace LocalJSX {
         "contentList"?: string;
         "side"?: sideType;
     }
+    interface UxVideo {
+        "contentList"?: string;
+        "src"?: string;
+    }
     interface IntrinsicElements {
         "ux-banners": UxBanners;
         "ux-text-image": UxTextImage;
+        "ux-video": UxVideo;
     }
 }
 export { LocalJSX as JSX };
@@ -52,6 +68,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "ux-banners": LocalJSX.UxBanners & JSXBase.HTMLAttributes<HTMLUxBannersElement>;
             "ux-text-image": LocalJSX.UxTextImage & JSXBase.HTMLAttributes<HTMLUxTextImageElement>;
+            "ux-video": LocalJSX.UxVideo & JSXBase.HTMLAttributes<HTMLUxVideoElement>;
         }
     }
 }
