@@ -8,14 +8,12 @@ import { textImageType, sideType } from './ux-text-image-type';
 
 export class UxTextImage {
     @State() content: textImageType[]
-    @State() sideContent: sideType
 
     @Prop() contentList: string
     @Prop() side: sideType
     
     componentWillLoad() {
        this.content = eval(this.contentList)
-       this.sideContent = this.side
     } 
 
     render() {
@@ -35,9 +33,11 @@ export class UxTextImage {
                             <p class="description">
                                 {element?.description}
                             </p>
-                            <button class="action-button">
-                                {element?.btnText}
-                            </button>
+                            <a href={element?.btnLink} class="btn-link">
+                                <button class="action-button">
+                                    {element?.btnText}
+                                </button>
+                            </a>
                         </div>
 
                     </div>
