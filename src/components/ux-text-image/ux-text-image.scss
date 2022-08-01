@@ -40,13 +40,9 @@
             }
         }
 
-        .btn-link{
+        .button{
+            @include button(#3B9BE0 ,#fff);
             text-decoration: none;
-            color: transparent;
-
-            .action-button{
-                @include button(#3B9BE0 ,#fff)
-            }
         }
     }
 }

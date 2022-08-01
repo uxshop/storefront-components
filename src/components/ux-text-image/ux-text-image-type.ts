@@ -5,8 +5,8 @@ export interface textImageType {
     }
     title: string
     description: string
-    btnText: string
-    btnLink: string
+    buttonLabel: string
+    href: string
 }
 
 export type sideType = "left" | "right"

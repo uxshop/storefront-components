@@ -33,10 +33,8 @@ export class UxTextImage {
                             <p class="description">
                                 {element?.description}
                             </p>
-                            <a href={element?.btnLink} class="btn-link">
-                                <button class="action-button">
-                                    {element?.btnText}
-                                </button>
+                            <a href={element?.href} class="button">
+                                {element?.buttonLabel}
                             </a>
                         </div>
 
