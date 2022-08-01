@@ -1,0 +1,117 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins/button";
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: $base-font;
+}
+
+.ux-text-image{
+    width: 100%;
+    padding: $padding-medium;
+
+    .container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        gap: $gap-medium;
+
+        .img{
+            width: 100%;
+        }
+
+        .infos{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: $gap-medium;
+
+            .title{
+                font-size: $font-title-mob;
+                line-height: 120%;
+            }
+
+            .description{
+                font-size: $font-text-mob;
+                line-height: 150%;
+            }
+        }
+
+        .button{
+            @include button(#3B9BE0 ,#fff);
+            text-decoration: none;
+        }
+    }
+}
+
+@media (min-width: $tablet-medium) {
+    .ux-text-image{
+        padding: 0 $padding-extra-large;
+        max-height: 768px;
+
+        .container {
+         flex-direction: row;
+         align-items: center;
+         max-height: 768px;
+
+            &.right{
+                order: 1;
+
+                .image-container{
+                    order: 0;
+                }
+            }
+
+            &.left{
+                order: 0;
+
+                .image-container{
+                    order: 1;
+                }
+            }
+         
+        .image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .img{
+                max-height: 100%;
+            }
+        }
+
+         .infos{
+             max-width: 45%;
+
+             .title{
+                 font-size: $font-title-desk;
+             }
+
+             .description{
+                 font-size: $font-text-desk;
+             }
+
+             .action-button{
+                width: 260px;
+             }
+            }
+        }
+    }
+}
+
+@media (min-width: $desktop-large) {
+    .ux-text-image{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        .container{
+            align-items: center;
+            justify-content: center;
+            max-width: $desktop-large;
+        }
+    }
+}
