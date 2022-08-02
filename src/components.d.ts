@@ -15,8 +15,9 @@ export namespace Components {
         "side": sideType;
     }
     interface UxVideo {
-        "contentList": string;
+        "description": string;
         "src": string;
+        "title": string;
     }
 }
 declare global {
@@ -53,8 +54,9 @@ declare namespace LocalJSX {
         "side"?: sideType;
     }
     interface UxVideo {
-        "contentList"?: string;
+        "description"?: string;
         "src"?: string;
+        "title"?: string;
     }
     interface IntrinsicElements {
         "ux-banners": UxBanners;
