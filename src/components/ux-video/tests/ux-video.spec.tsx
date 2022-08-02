@@ -7,7 +7,7 @@ describe('ux-video', () => {
         const page = await newSpecPage({
             components: [UxVideo],
             html: `<ux-video></ux-video>`,
-            template: () => (<ux-video content-list="[]" src=""></ux-video>)
+            template: () => (<ux-video title="" description="" src=""></ux-video>)
         })
         expect(page.root).toBeTruthy()
     })
