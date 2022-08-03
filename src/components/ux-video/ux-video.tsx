@@ -1,4 +1,5 @@
 import {Component, h, Prop, State} from '@stencil/core'
+import { youtubeUrlFormatter } from '../../assets/helpers/youtubeUrlFormatter'
 @Component({
     tag: 'ux-video',
     styleUrl: 'ux-video.scss'
@@ -11,12 +12,8 @@ export class UxVideo {
     @Prop() description: string
     @Prop() src: string
 
-    formatVideoUrl(url:string){
-        return this.video = url.replace('https://www.youtube.com/watch?v=', 'https://www.youtube.com/embed/')
-    }
-
     componentWillLoad(){
-        this.formatVideoUrl(this.src)
+        this.video = youtubeUrlFormatter(this.src)
     }
 
     render(){
