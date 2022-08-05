@@ -1,0 +1,70 @@
+@import "../../assets/styles/variables";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.ux-testimonials{
+    width: 100%;
+    padding: $padding-medium;
+    display: flex;
+    flex-direction: column;
+    gap: $gap-medium;
+    font-family: $base-font;
+
+    .infos{
+        display: flex;
+        flex-direction: column;
+        gap: $gap-small;
+        text-align: center;
+
+        .title{
+            font-size: $font-title-mob;
+        }
+
+        .description{
+            font-size: $font-text-mob;
+        }
+    }
+
+    .testimonials-container{
+        .testimonial{
+            padding: $padding-small;
+
+            .message{
+                padding: $padding-small 0;
+                font-size: $font-text-mob;
+            }
+        }
+
+        .customer{
+            display: flex;
+            gap: $gap-small;
+            align-items: center;
+
+            .customer-icon{
+                max-width: 75px;
+            }
+        }
+    }
+}
+
+@media(min-width: $tablet-small){
+    .ux-testimonials{
+        max-width: $desktop-small;
+        margin: auto;
+
+        .testimonials-container{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+           
+            .testimonial{
+                max-width: $mobile-large;
+            }
+        }
+    }
+}
