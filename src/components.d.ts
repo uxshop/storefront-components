@@ -10,6 +10,9 @@ export namespace Components {
     interface UxBanners {
         "imagesList": string;
     }
+    interface UxCarousel {
+        "contentList": string;
+    }
     interface UxTestimonials {
         "description": string;
         "testimonialsList": string;
@@ -32,6 +35,12 @@ declare global {
         prototype: HTMLUxBannersElement;
         new (): HTMLUxBannersElement;
     };
+    interface HTMLUxCarouselElement extends Components.UxCarousel, HTMLStencilElement {
+    }
+    var HTMLUxCarouselElement: {
+        prototype: HTMLUxCarouselElement;
+        new (): HTMLUxCarouselElement;
+    };
     interface HTMLUxTestimonialsElement extends Components.UxTestimonials, HTMLStencilElement {
     }
     var HTMLUxTestimonialsElement: {
@@ -52,6 +61,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "ux-banners": HTMLUxBannersElement;
+        "ux-carousel": HTMLUxCarouselElement;
         "ux-testimonials": HTMLUxTestimonialsElement;
         "ux-text-image": HTMLUxTextImageElement;
         "ux-video": HTMLUxVideoElement;
@@ -60,6 +70,9 @@ declare global {
 declare namespace LocalJSX {
     interface UxBanners {
         "imagesList"?: string;
+    }
+    interface UxCarousel {
+        "contentList"?: string;
     }
     interface UxTestimonials {
         "description"?: string;
@@ -77,6 +90,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "ux-banners": UxBanners;
+        "ux-carousel": UxCarousel;
         "ux-testimonials": UxTestimonials;
         "ux-text-image": UxTextImage;
         "ux-video": UxVideo;
@@ -87,6 +101,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "ux-banners": LocalJSX.UxBanners & JSXBase.HTMLAttributes<HTMLUxBannersElement>;
+            "ux-carousel": LocalJSX.UxCarousel & JSXBase.HTMLAttributes<HTMLUxCarouselElement>;
             "ux-testimonials": LocalJSX.UxTestimonials & JSXBase.HTMLAttributes<HTMLUxTestimonialsElement>;
             "ux-text-image": LocalJSX.UxTextImage & JSXBase.HTMLAttributes<HTMLUxTextImageElement>;
             "ux-video": LocalJSX.UxVideo & JSXBase.HTMLAttributes<HTMLUxVideoElement>;
