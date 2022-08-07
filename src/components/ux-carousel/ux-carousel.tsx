@@ -1,5 +1,5 @@
 import { Component, h, Prop, State } from "@stencil/core"
-import { carouselContentType } from "./ux-carousel-type"
+import { carouselContentType, carouselSettingsType, textAlignType } from "./ux-carousel-type"
 import Splide from '@splidejs/splide'
 
 @Component({
@@ -9,14 +9,19 @@ import Splide from '@splidejs/splide'
 
 export class UxCarousel {
     @State() carouselList: carouselContentType[]
+    @State() carouselSettings: carouselSettingsType
+
     @Prop() contentList: string
+    @Prop() settings: string
+    @Prop() textAlign: textAlignType
     
     componentWillLoad() {
         this.carouselList = eval(this.contentList)
+        this.carouselSettings = JSON.parse(this.settings)
     }
 
     componentDidRender() {
-        new Splide('.splide').mount();
+        new Splide('.splide', {...this.carouselSettings}).mount();
     }
 
     render() {
@@ -33,7 +38,7 @@ export class UxCarousel {
                                         <img src={slide.image?.desktopSrc} alt={slide.image?.alt} class="img"/>
                                     </picture>
 
-                                    <div class="infos">
+                                    <div class={`infos ${this.textAlign}`}>
                                         <h2 class="title">{slide?.title}</h2>
                                         <p class="description">{slide?.description}</p>
                                         <a href={slide?.button?.href} class="button">

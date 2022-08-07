@@ -5,6 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { textAlignType } from "./components/ux-carousel/ux-carousel-type";
 import { sideType } from "./components/ux-text-image/ux-text-image-type";
 export namespace Components {
     interface UxBanners {
@@ -12,6 +13,8 @@ export namespace Components {
     }
     interface UxCarousel {
         "contentList": string;
+        "settings": string;
+        "textAlign": textAlignType;
     }
     interface UxTestimonials {
         "description": string;
@@ -73,6 +76,8 @@ declare namespace LocalJSX {
     }
     interface UxCarousel {
         "contentList"?: string;
+        "settings"?: string;
+        "textAlign"?: textAlignType;
     }
     interface UxTestimonials {
         "description"?: string;

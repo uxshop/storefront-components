@@ -9,6 +9,7 @@
     .splide__slide{
         width: 100%;
         position: relative;
+        display: flex;
 
         .img{
             width: 100%;
@@ -19,6 +20,8 @@
             position: absolute;
             top: 0;
             bottom: 0;
+            left: 0;
+            right: 0;
             padding: $padding-large;
             gap: $gap-small;
             color: white;
@@ -42,6 +45,52 @@
                 text-decoration: none;
             }
         }
-    }
 
+    }
+    
+}
+
+.splide__arrow{
+    background-color: rgb(40, 40, 40);
+    opacity: 0.5;
+    border-radius: 10%;
+
+    svg{
+        path{
+            fill: #fff;
+        }
+    }
+}
+
+@media(min-width: $tablet-large){
+    .infos{ 
+        &.right{
+            margin-right: $padding-medium;
+            margin-left: 20%;
+            align-items: flex-end !important;
+            text-align: right !important;
+        }
+    
+        &.left{
+            width: 70%;
+            margin-left: $padding-medium;
+            align-items: flex-start !important;
+            text-align: left !important;
+        }
+
+        .title{
+            font-size: $font-title-desk;
+        }
+
+        .description{
+            font-size: $font-text-desk;
+        }
+    }
+}
+
+@media(min-width: $desktop-medium){
+    .ux-carousel{
+        max-width: $desktop-medium;
+        margin: auto;
+    }
 }
