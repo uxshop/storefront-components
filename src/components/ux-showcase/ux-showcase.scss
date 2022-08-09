@@ -1,0 +1,17 @@
+@import '../../../node_modules/@splidejs/splide/src/css/template/default/index.scss';
+@import "../../assets/styles/variables";
+
+.ux-showcase{
+    padding: $padding-small $padding-large;
+    margin: auto;
+
+    .splide__arrow{
+        background: transparent !important;
+    }
+
+    a{
+        text-decoration: none;
+        color: #000;
+    }
+}
+

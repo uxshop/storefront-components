@@ -7,6 +7,7 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { carouselSettngsType } from "./components/ux-carousel/ux-carousel-type";
 import { textAlignType } from "./components/ux-carousel-item/ux-carousel-item-type";
+import { showcaseSettingsType } from "./components/ux-showcase/ux-showcase-type";
 import { sideType } from "./components/ux-text-image/ux-text-image-type";
 export namespace Components {
     interface UxBanners {
@@ -27,6 +28,20 @@ export namespace Components {
         "desktopSrc"?: string;
         "mobileSrc"?: string;
         "textAlign"?: textAlignType;
+    }
+    interface UxShowcase {
+        "autoplay": showcaseSettingsType;
+        "rewind": showcaseSettingsType;
+    }
+    interface UxShowcaseItem {
+        "hasInterest"?: boolean;
+        "href": string;
+        "imageSrc": string;
+        "name": string;
+        "parcelPrice"?: number;
+        "parcels"?: number;
+        "price": number;
+        "priceCompare"?: number;
     }
     interface UxTestimonials {
         "description": string;
@@ -62,6 +77,18 @@ declare global {
         prototype: HTMLUxCarouselItemElement;
         new (): HTMLUxCarouselItemElement;
     };
+    interface HTMLUxShowcaseElement extends Components.UxShowcase, HTMLStencilElement {
+    }
+    var HTMLUxShowcaseElement: {
+        prototype: HTMLUxShowcaseElement;
+        new (): HTMLUxShowcaseElement;
+    };
+    interface HTMLUxShowcaseItemElement extends Components.UxShowcaseItem, HTMLStencilElement {
+    }
+    var HTMLUxShowcaseItemElement: {
+        prototype: HTMLUxShowcaseItemElement;
+        new (): HTMLUxShowcaseItemElement;
+    };
     interface HTMLUxTestimonialsElement extends Components.UxTestimonials, HTMLStencilElement {
     }
     var HTMLUxTestimonialsElement: {
@@ -84,6 +111,8 @@ declare global {
         "ux-banners": HTMLUxBannersElement;
         "ux-carousel": HTMLUxCarouselElement;
         "ux-carousel-item": HTMLUxCarouselItemElement;
+        "ux-showcase": HTMLUxShowcaseElement;
+        "ux-showcase-item": HTMLUxShowcaseItemElement;
         "ux-testimonials": HTMLUxTestimonialsElement;
         "ux-text-image": HTMLUxTextImageElement;
         "ux-video": HTMLUxVideoElement;
@@ -109,6 +138,20 @@ declare namespace LocalJSX {
         "mobileSrc"?: string;
         "textAlign"?: textAlignType;
     }
+    interface UxShowcase {
+        "autoplay"?: showcaseSettingsType;
+        "rewind"?: showcaseSettingsType;
+    }
+    interface UxShowcaseItem {
+        "hasInterest"?: boolean;
+        "href"?: string;
+        "imageSrc"?: string;
+        "name"?: string;
+        "parcelPrice"?: number;
+        "parcels"?: number;
+        "price"?: number;
+        "priceCompare"?: number;
+    }
     interface UxTestimonials {
         "description"?: string;
         "testimonialsList"?: string;
@@ -127,6 +170,8 @@ declare namespace LocalJSX {
         "ux-banners": UxBanners;
         "ux-carousel": UxCarousel;
         "ux-carousel-item": UxCarouselItem;
+        "ux-showcase": UxShowcase;
+        "ux-showcase-item": UxShowcaseItem;
         "ux-testimonials": UxTestimonials;
         "ux-text-image": UxTextImage;
         "ux-video": UxVideo;
@@ -139,6 +184,8 @@ declare module "@stencil/core" {
             "ux-banners": LocalJSX.UxBanners & JSXBase.HTMLAttributes<HTMLUxBannersElement>;
             "ux-carousel": LocalJSX.UxCarousel & JSXBase.HTMLAttributes<HTMLUxCarouselElement>;
             "ux-carousel-item": LocalJSX.UxCarouselItem & JSXBase.HTMLAttributes<HTMLUxCarouselItemElement>;
+            "ux-showcase": LocalJSX.UxShowcase & JSXBase.HTMLAttributes<HTMLUxShowcaseElement>;
+            "ux-showcase-item": LocalJSX.UxShowcaseItem & JSXBase.HTMLAttributes<HTMLUxShowcaseItemElement>;
             "ux-testimonials": LocalJSX.UxTestimonials & JSXBase.HTMLAttributes<HTMLUxTestimonialsElement>;
             "ux-text-image": LocalJSX.UxTextImage & JSXBase.HTMLAttributes<HTMLUxTextImageElement>;
             "ux-video": LocalJSX.UxVideo & JSXBase.HTMLAttributes<HTMLUxVideoElement>;
