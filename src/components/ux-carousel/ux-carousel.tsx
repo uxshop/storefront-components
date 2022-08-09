@@ -1,27 +1,24 @@
-import { Component, h, Prop, State } from "@stencil/core"
-import { carouselContentType, carouselSettingsType, textAlignType } from "./ux-carousel-type"
+import { Component, h, Prop } from "@stencil/core"
+import { carouselSettngsType } from "./ux-carousel-type"
 import Splide from '@splidejs/splide'
-
 @Component({
     tag: 'ux-carousel',
     styleUrl: 'ux-carousel.scss',
 })
 
 export class UxCarousel {
-    @State() carouselList: carouselContentType[]
-    @State() carouselSettings: carouselSettingsType
-
-    @Prop() contentList: string
-    @Prop() settings: string
-    @Prop() textAlign: textAlignType
-    
-    componentWillLoad() {
-        this.carouselList = eval(this.contentList)
-        this.carouselSettings = JSON.parse(this.settings)
-    }
+    @Prop() rewind: carouselSettngsType
+    @Prop() autoplay: carouselSettngsType
+    @Prop() arrows: carouselSettngsType
+    @Prop() pagination: carouselSettngsType
 
     componentDidRender() {
-        new Splide('.splide', {...this.carouselSettings}).mount();
+        new Splide('.splide', {
+            rewind: eval(this.rewind),
+            autoplay: eval(this.autoplay),
+            arrows: eval(this.arrows),
+            pagination: eval(this.pagination)
+        }).mount();
     }
 
     render() {
@@ -29,25 +26,7 @@ export class UxCarousel {
             <section class="ux-carousel splide">
                 <div class="splide__track">
                     <div class="splide__list">
-                        {this.carouselList.map(slide => {
-                            return(
-                                <div class="splide__slide">
-                                    <picture class="img-container">
-                                        <source srcSet={slide.image?.mobileSrc} media="(max-width: 768px)"/>
-                                        <source srcSet={slide.image?.desktopSrc} media="(min-width: 1024px)"/>
-                                        <img src={slide.image?.desktopSrc} alt={slide.image?.alt} class="img"/>
-                                    </picture>
-
-                                    <div class={`infos ${this.textAlign}`}>
-                                        <h2 class="title">{slide?.title}</h2>
-                                        <p class="description">{slide?.description}</p>
-                                        <a href={slide?.button?.href} class="button">
-                                            {slide?.button?.label}
-                                        </a>
-                                    </div>
-                                </div>
-                            )
-                        })}
+                        <slot></slot>
                     </div>
                 </div>
             </section>

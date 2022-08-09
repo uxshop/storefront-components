@@ -5,16 +5,28 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { textAlignType } from "./components/ux-carousel/ux-carousel-type";
+import { carouselSettngsType } from "./components/ux-carousel/ux-carousel-type";
+import { textAlignType } from "./components/ux-carousel-item/ux-carousel-item-type";
 import { sideType } from "./components/ux-text-image/ux-text-image-type";
 export namespace Components {
     interface UxBanners {
         "imagesList": string;
     }
     interface UxCarousel {
-        "contentList": string;
-        "settings": string;
-        "textAlign": textAlignType;
+        "arrows": carouselSettngsType;
+        "autoplay": carouselSettngsType;
+        "pagination": carouselSettngsType;
+        "rewind": carouselSettngsType;
+    }
+    interface UxCarouselItem {
+        "alt"?: string;
+        "bannerTitle"?: string;
+        "buttonHref"?: string;
+        "buttonLabel"?: string;
+        "description"?: string;
+        "desktopSrc"?: string;
+        "mobileSrc"?: string;
+        "textAlign"?: textAlignType;
     }
     interface UxTestimonials {
         "description": string;
@@ -44,6 +56,12 @@ declare global {
         prototype: HTMLUxCarouselElement;
         new (): HTMLUxCarouselElement;
     };
+    interface HTMLUxCarouselItemElement extends Components.UxCarouselItem, HTMLStencilElement {
+    }
+    var HTMLUxCarouselItemElement: {
+        prototype: HTMLUxCarouselItemElement;
+        new (): HTMLUxCarouselItemElement;
+    };
     interface HTMLUxTestimonialsElement extends Components.UxTestimonials, HTMLStencilElement {
     }
     var HTMLUxTestimonialsElement: {
@@ -65,6 +83,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "ux-banners": HTMLUxBannersElement;
         "ux-carousel": HTMLUxCarouselElement;
+        "ux-carousel-item": HTMLUxCarouselItemElement;
         "ux-testimonials": HTMLUxTestimonialsElement;
         "ux-text-image": HTMLUxTextImageElement;
         "ux-video": HTMLUxVideoElement;
@@ -75,8 +94,19 @@ declare namespace LocalJSX {
         "imagesList"?: string;
     }
     interface UxCarousel {
-        "contentList"?: string;
-        "settings"?: string;
+        "arrows"?: carouselSettngsType;
+        "autoplay"?: carouselSettngsType;
+        "pagination"?: carouselSettngsType;
+        "rewind"?: carouselSettngsType;
+    }
+    interface UxCarouselItem {
+        "alt"?: string;
+        "bannerTitle"?: string;
+        "buttonHref"?: string;
+        "buttonLabel"?: string;
+        "description"?: string;
+        "desktopSrc"?: string;
+        "mobileSrc"?: string;
         "textAlign"?: textAlignType;
     }
     interface UxTestimonials {
@@ -96,6 +126,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "ux-banners": UxBanners;
         "ux-carousel": UxCarousel;
+        "ux-carousel-item": UxCarouselItem;
         "ux-testimonials": UxTestimonials;
         "ux-text-image": UxTextImage;
         "ux-video": UxVideo;
@@ -107,6 +138,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "ux-banners": LocalJSX.UxBanners & JSXBase.HTMLAttributes<HTMLUxBannersElement>;
             "ux-carousel": LocalJSX.UxCarousel & JSXBase.HTMLAttributes<HTMLUxCarouselElement>;
+            "ux-carousel-item": LocalJSX.UxCarouselItem & JSXBase.HTMLAttributes<HTMLUxCarouselItemElement>;
             "ux-testimonials": LocalJSX.UxTestimonials & JSXBase.HTMLAttributes<HTMLUxTestimonialsElement>;
             "ux-text-image": LocalJSX.UxTextImage & JSXBase.HTMLAttributes<HTMLUxTextImageElement>;
             "ux-video": LocalJSX.UxVideo & JSXBase.HTMLAttributes<HTMLUxVideoElement>;
