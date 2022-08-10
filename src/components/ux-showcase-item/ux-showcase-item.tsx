@@ -1,4 +1,4 @@
-import { Component, h, Host, Prop } from "@stencil/core";
+import { Component, h, Prop } from "@stencil/core";
 import { currencyFormatter } from "../../assets/helpers/currencyFormatter";
 
 @Component({
@@ -6,7 +6,7 @@ import { currencyFormatter } from "../../assets/helpers/currencyFormatter";
     styleUrl: 'ux-showcase-item.scss'
 })
 
-export class UxShowcaseItem{
+export class UxShowcaseItem {
     @Prop() href: string
     @Prop() imageSrc: string
     @Prop() name: string
@@ -16,34 +16,31 @@ export class UxShowcaseItem{
     @Prop() parcelPrice?: number
     @Prop() hasInterest?: boolean
 
-
-    render(){
-        return(
-            <Host class="splide__slide">
+    render() {
+        return (
+            <div class="ux-showcase-item">
                 <a href={this.href}>
-                    <div class="ux-showcase-item">
-                        <div class="image-container">
-                            <img src={this.imageSrc} alt={this.name} class="img"/>
-                            <a href={this.href} class="btn">comprar</a>
-                        </div>
-                        <div class="card-infos">
-                            <h2 class="name">{this.name}</h2>
-                            <div class="payment">
-                                <div class="prices">
-                                    <span class="price-compare">{currencyFormatter(this.priceCompare)}</span>
-                                    <span class="price">{currencyFormatter(this.price)}</span>
-                                </div>
-                                    {this.parcels && (
-                                        <span class="price-installments">
-                                            até {this.parcels}x de {currencyFormatter(this.parcelPrice)}
-                                            {this.hasInterest ? ' com' : ' sem'} juros
-                                        </span>
-                                    )}
+                    <div class="image-container">
+                        <img src={this.imageSrc} alt={this.name} class="img" />
+                        <a href={this.href} class="btn">comprar</a>
+                    </div>
+                    <div class="card-infos">
+                        <p class="name">{this.name}</p>
+                        <div class="payment">
+                            <div class="prices">
+                                <span class="price-compare">{currencyFormatter(this.priceCompare)}</span>
+                                <span class="price">{currencyFormatter(this.price)}</span>
                             </div>
+                            {this.parcels && (
+                                <span class="price-installments">
+                                    até {this.parcels}x de {currencyFormatter(this.parcelPrice)}
+                                    {this.hasInterest ? ' com' : ' sem'} juros
+                                </span>
+                            )}
                         </div>
                     </div>
                 </a>
-            </Host>
+            </div>
         )
     }
 }

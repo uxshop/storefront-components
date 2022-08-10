@@ -1,17 +1,15 @@
-@import '../../../node_modules/@splidejs/splide/src/css/template/default/index.scss';
 @import "../../assets/styles/variables";
 
 .ux-showcase{
-    padding: $padding-small $padding-large;
-    margin: auto;
-
-    .splide__arrow{
-        background: transparent !important;
-    }
-
+    width: 100%;
+    padding: $padding-medium;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
     a{
         text-decoration: none;
         color: #000;
     }
 }
-

@@ -1,14 +1,10 @@
-@import '../../../node_modules/@splidejs/splide/src/css/template/default/index.scss';
 @import "../../assets/styles/variables";
 
 .ux-showcase-item{
     display: flex;
-    flex-direction: column;
-    padding: $padding-small;
-    min-height: 260px;
-    max-height: auto;
-    min-width: 155px;
-    max-width: auto;
+    padding: 8px;
+    width: 170px;
+    min-height: 290px;
     font-family: $base-font;
     cursor: pointer;
     text-align: left;
@@ -84,13 +80,11 @@
 
 @media(min-width: $tablet-small){
     .ux-showcase-item{
-        min-height: 320px;
-        min-width: 185px;
+        width: 230px;
 
         .card-infos{
             .name{
                 font-size: 18px;
-                font-weight: 700;
                 margin: 6px 0 14px 0;
             }
 

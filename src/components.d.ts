@@ -7,7 +7,6 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { carouselSettngsType } from "./components/ux-carousel/ux-carousel-type";
 import { textAlignType } from "./components/ux-carousel-item/ux-carousel-item-type";
-import { showcaseSettingsType } from "./components/ux-showcase/ux-showcase-type";
 import { sideType } from "./components/ux-text-image/ux-text-image-type";
 export namespace Components {
     interface UxBanners {
@@ -30,8 +29,6 @@ export namespace Components {
         "textAlign"?: textAlignType;
     }
     interface UxShowcase {
-        "autoplay": showcaseSettingsType;
-        "rewind": showcaseSettingsType;
     }
     interface UxShowcaseItem {
         "hasInterest"?: boolean;
@@ -139,8 +136,6 @@ declare namespace LocalJSX {
         "textAlign"?: textAlignType;
     }
     interface UxShowcase {
-        "autoplay"?: showcaseSettingsType;
-        "rewind"?: showcaseSettingsType;
     }
     interface UxShowcaseItem {
         "hasInterest"?: boolean;
