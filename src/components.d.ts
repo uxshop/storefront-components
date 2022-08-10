@@ -6,7 +6,6 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { carouselSettngsType } from "./components/ux-carousel/ux-carousel-type";
-import { textAlignType } from "./components/ux-carousel-item/ux-carousel-item-type";
 import { sideType } from "./components/ux-text-image/ux-text-image-type";
 export namespace Components {
     interface UxBanners {
@@ -26,7 +25,6 @@ export namespace Components {
         "description"?: string;
         "desktopSrc"?: string;
         "mobileSrc"?: string;
-        "textAlign"?: textAlignType;
     }
     interface UxTestimonials {
         "description": string;
@@ -107,7 +105,6 @@ declare namespace LocalJSX {
         "description"?: string;
         "desktopSrc"?: string;
         "mobileSrc"?: string;
-        "textAlign"?: textAlignType;
     }
     interface UxTestimonials {
         "description"?: string;

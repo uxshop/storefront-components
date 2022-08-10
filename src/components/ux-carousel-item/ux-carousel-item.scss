@@ -58,19 +58,10 @@
 
 @media(min-width: $tablet-large){
     .infos{ 
-        &.right{
-            margin-right: $padding-medium;
-            margin-left: 20%;
-            align-items: flex-end !important;
-            text-align: right !important;
-        }
-    
-        &.left{
-            width: 70%;
-            margin-left: $padding-medium;
-            align-items: flex-start !important;
-            text-align: left !important;
-        }
+        width: 70%;
+        margin-left: $padding-medium;
+        align-items: flex-start !important;
+        text-align: left !important;
 
         .title{
             font-size: $font-title-desk;

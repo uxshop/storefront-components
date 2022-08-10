@@ -1,6 +1,4 @@
 import { Component, h, Host, Prop } from "@stencil/core";
-import { textAlignType } from "./ux-carousel-item-type";
-
 @Component({
     tag: 'ux-carousel-item',
     styleUrl: 'ux-carousel-item.scss'
@@ -8,7 +6,6 @@ import { textAlignType } from "./ux-carousel-item-type";
 
 export class UxCarouselItem {
 
-    @Prop() textAlign?: textAlignType
     @Prop() bannerTitle?: string
     @Prop() description?: string
     @Prop() buttonLabel?: string
@@ -27,7 +24,7 @@ export class UxCarouselItem {
                         <img src={this?.desktopSrc} alt={this?.alt} class="img" />
                     </picture>
 
-                    <div class={`infos ${this?.textAlign}`}>
+                    <div class="infos">
                         <h2 class="title">{this?.bannerTitle}</h2>
                         <p class="description">{this?.description}</p>
                         <a href={this?.buttonHref} class="button">
