@@ -11,18 +11,13 @@ export namespace Components {
         "imagesList": string;
     }
     interface UxTestimonials {
-        "description": string;
-        "testimonialsList": string;
-        "title": string;
+        "dataDescription": string;
+        "dataTestimonials": string;
+        "dataTitle": string;
     }
     interface UxTextImage {
         "contentList": string;
         "side": sideType;
-    }
-    interface UxVideo {
-        "description": string;
-        "src": string;
-        "title": string;
     }
 }
 declare global {
@@ -44,17 +39,10 @@ declare global {
         prototype: HTMLUxTextImageElement;
         new (): HTMLUxTextImageElement;
     };
-    interface HTMLUxVideoElement extends Components.UxVideo, HTMLStencilElement {
-    }
-    var HTMLUxVideoElement: {
-        prototype: HTMLUxVideoElement;
-        new (): HTMLUxVideoElement;
-    };
     interface HTMLElementTagNameMap {
         "ux-banners": HTMLUxBannersElement;
         "ux-testimonials": HTMLUxTestimonialsElement;
         "ux-text-image": HTMLUxTextImageElement;
-        "ux-video": HTMLUxVideoElement;
     }
 }
 declare namespace LocalJSX {
@@ -62,24 +50,18 @@ declare namespace LocalJSX {
         "imagesList"?: string;
     }
     interface UxTestimonials {
-        "description"?: string;
-        "testimonialsList"?: string;
-        "title"?: string;
+        "dataDescription"?: string;
+        "dataTestimonials"?: string;
+        "dataTitle"?: string;
     }
     interface UxTextImage {
         "contentList"?: string;
         "side"?: sideType;
     }
-    interface UxVideo {
-        "description"?: string;
-        "src"?: string;
-        "title"?: string;
-    }
     interface IntrinsicElements {
         "ux-banners": UxBanners;
         "ux-testimonials": UxTestimonials;
         "ux-text-image": UxTextImage;
-        "ux-video": UxVideo;
     }
 }
 export { LocalJSX as JSX };
@@ -89,7 +71,6 @@ declare module "@stencil/core" {
             "ux-banners": LocalJSX.UxBanners & JSXBase.HTMLAttributes<HTMLUxBannersElement>;
             "ux-testimonials": LocalJSX.UxTestimonials & JSXBase.HTMLAttributes<HTMLUxTestimonialsElement>;
             "ux-text-image": LocalJSX.UxTextImage & JSXBase.HTMLAttributes<HTMLUxTextImageElement>;
-            "ux-video": LocalJSX.UxVideo & JSXBase.HTMLAttributes<HTMLUxVideoElement>;
         }
     }
 }
