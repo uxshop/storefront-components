@@ -7,7 +7,7 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface UxBanners {
-        "imagesList": string;
+        "dataImages": string;
     }
 }
 declare global {
@@ -23,7 +23,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface UxBanners {
-        "imagesList"?: string;
+        "dataImages"?: string;
     }
     interface IntrinsicElements {
         "ux-banners": UxBanners;
