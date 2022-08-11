@@ -7,34 +7,34 @@ import { currencyFormatter } from "../../assets/helpers/currencyFormatter";
 })
 
 export class UxShowcaseItem {
-    @Prop() href: string
-    @Prop() imageSrc: string
-    @Prop() name: string
-    @Prop() price: number
-    @Prop() priceCompare?: number
-    @Prop() parcels?: number
-    @Prop() parcelPrice?: number
-    @Prop() hasInterest?: boolean
+    @Prop() dataHref: string
+    @Prop() dataImage: string
+    @Prop() dataName: string
+    @Prop() dataPrice: number
+    @Prop() dataPriceCompare?: number
+    @Prop() dataParcels?: number
+    @Prop() dataParcelPrice?: number
+    @Prop() dataHasInterest?: boolean
 
     render() {
         return (
             <div class="ux-showcase-item">
-                <a href={this.href}>
+                <a href={this.dataHref}>
                     <div class="image-container">
-                        <img src={this.imageSrc} alt={this.name} class="img" />
-                        <a href={this.href} class="btn">comprar</a>
+                        <img src={this.dataImage} alt={this.dataName} class="img" />
+                        <a href={this.dataHref} class="btn">comprar</a>
                     </div>
                     <div class="card-infos">
-                        <p class="name">{this.name}</p>
+                        <p class="name">{this.dataName}</p>
                         <div class="payment">
                             <div class="prices">
-                                <span class="price-compare">{currencyFormatter(this.priceCompare)}</span>
-                                <span class="price">{currencyFormatter(this.price)}</span>
+                                <span class="price-compare">{currencyFormatter(this.dataPriceCompare)}</span>
+                                <span class="price">{currencyFormatter(this.dataPrice)}</span>
                             </div>
-                            {this.parcels && (
+                            {this.dataParcels && (
                                 <span class="price-installments">
-                                    até {this.parcels}x de {currencyFormatter(this.parcelPrice)}
-                                    {this.hasInterest ? ' com' : ' sem'} juros
+                                    até {this.dataParcels}x de {currencyFormatter(this.dataParcelPrice)}
+                                    {this.dataHasInterest ? ' com' : ' sem'} juros
                                 </span>
                             )}
                         </div>

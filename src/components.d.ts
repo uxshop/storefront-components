@@ -31,14 +31,14 @@ export namespace Components {
     interface UxShowcase {
     }
     interface UxShowcaseItem {
-        "hasInterest"?: boolean;
-        "href": string;
-        "imageSrc": string;
-        "name": string;
-        "parcelPrice"?: number;
-        "parcels"?: number;
-        "price": number;
-        "priceCompare"?: number;
+        "dataHasInterest"?: boolean;
+        "dataHref": string;
+        "dataImage": string;
+        "dataName": string;
+        "dataParcelPrice"?: number;
+        "dataParcels"?: number;
+        "dataPrice": number;
+        "dataPriceCompare"?: number;
     }
     interface UxTestimonials {
         "description": string;
@@ -138,14 +138,14 @@ declare namespace LocalJSX {
     interface UxShowcase {
     }
     interface UxShowcaseItem {
-        "hasInterest"?: boolean;
-        "href"?: string;
-        "imageSrc"?: string;
-        "name"?: string;
-        "parcelPrice"?: number;
-        "parcels"?: number;
-        "price"?: number;
-        "priceCompare"?: number;
+        "dataHasInterest"?: boolean;
+        "dataHref"?: string;
+        "dataImage"?: string;
+        "dataName"?: string;
+        "dataParcelPrice"?: number;
+        "dataParcels"?: number;
+        "dataPrice"?: number;
+        "dataPriceCompare"?: number;
     }
     interface UxTestimonials {
         "description"?: string;
