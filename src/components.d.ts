@@ -5,26 +5,24 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { carouselSettngsType } from "./components/ux-carousel/ux-carousel-type";
 import { sideType } from "./components/ux-text-image/ux-text-image-type";
 export namespace Components {
     interface UxBanners {
         "imagesList": string;
     }
     interface UxCarousel {
-        "arrows": carouselSettngsType;
-        "autoplay": carouselSettngsType;
-        "pagination": carouselSettngsType;
-        "rewind": carouselSettngsType;
+        "arrows": boolean;
+        "autoplay": boolean;
+        "pagination": boolean;
+        "rewind": boolean;
     }
     interface UxCarouselItem {
-        "alt"?: string;
-        "bannerTitle"?: string;
-        "buttonHref"?: string;
-        "buttonLabel"?: string;
-        "description"?: string;
-        "desktopSrc"?: string;
-        "mobileSrc"?: string;
+        "dataButtonHref"?: string;
+        "dataButtonLabel"?: string;
+        "dataDescription"?: string;
+        "dataDesktopImage"?: string;
+        "dataMobileImage"?: string;
+        "dataTitle"?: string;
     }
     interface UxTestimonials {
         "description": string;
@@ -92,19 +90,18 @@ declare namespace LocalJSX {
         "imagesList"?: string;
     }
     interface UxCarousel {
-        "arrows"?: carouselSettngsType;
-        "autoplay"?: carouselSettngsType;
-        "pagination"?: carouselSettngsType;
-        "rewind"?: carouselSettngsType;
+        "arrows"?: boolean;
+        "autoplay"?: boolean;
+        "pagination"?: boolean;
+        "rewind"?: boolean;
     }
     interface UxCarouselItem {
-        "alt"?: string;
-        "bannerTitle"?: string;
-        "buttonHref"?: string;
-        "buttonLabel"?: string;
-        "description"?: string;
-        "desktopSrc"?: string;
-        "mobileSrc"?: string;
+        "dataButtonHref"?: string;
+        "dataButtonLabel"?: string;
+        "dataDescription"?: string;
+        "dataDesktopImage"?: string;
+        "dataMobileImage"?: string;
+        "dataTitle"?: string;
     }
     interface UxTestimonials {
         "description"?: string;

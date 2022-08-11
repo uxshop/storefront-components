@@ -5,30 +5,28 @@ import { Component, h, Host, Prop } from "@stencil/core";
 })
 
 export class UxCarouselItem {
-
-    @Prop() bannerTitle?: string
-    @Prop() description?: string
-    @Prop() buttonLabel?: string
-    @Prop() buttonHref?: string
-    @Prop() desktopSrc?: string
-    @Prop() mobileSrc?: string
-    @Prop() alt?: string
+    @Prop() dataTitle?: string
+    @Prop() dataDescription?: string
+    @Prop() dataButtonLabel?: string
+    @Prop() dataButtonHref?: string
+    @Prop() dataDesktopImage?: string
+    @Prop() dataMobileImage?: string
 
     render() {
         return (
             <Host class="splide__slide">
                 <div class="ux-carousel-item">
                     <picture class="img-container">
-                        <source srcSet={this?.mobileSrc} media="(max-width: 768px)" />
-                        <source srcSet={this?.desktopSrc} media="(min-width: 1024px)" />
-                        <img src={this?.desktopSrc} alt={this?.alt} class="img" />
+                        <source srcSet={this?.dataMobileImage} media="(max-width: 768px)" />
+                        <source srcSet={this?.dataDesktopImage} media="(min-width: 1024px)" />
+                        <img src={this?.dataDesktopImage} alt={null} class="img" />
                     </picture>
 
                     <div class="infos">
-                        <h2 class="title">{this?.bannerTitle}</h2>
-                        <p class="description">{this?.description}</p>
-                        <a href={this?.buttonHref} class="button">
-                            {this?.buttonLabel}
+                        <h2 class="title">{this?.dataTitle}</h2>
+                        <p class="description">{this?.dataDescription}</p>
+                        <a href={this?.dataButtonHref} class="button">
+                            {this?.dataButtonLabel}
                         </a>
                     </div>
                 </div>
