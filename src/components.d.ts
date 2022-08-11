@@ -11,7 +11,11 @@ export namespace Components {
         "imagesList": string;
     }
     interface UxTextImage {
-        "contentList": string;
+        "dataButtonHref": string;
+        "dataButtonLabel": string;
+        "dataDescription": string;
+        "dataImage": string;
+        "dataTitle": string;
         "side": sideType;
     }
 }
@@ -38,7 +42,11 @@ declare namespace LocalJSX {
         "imagesList"?: string;
     }
     interface UxTextImage {
-        "contentList"?: string;
+        "dataButtonHref"?: string;
+        "dataButtonLabel"?: string;
+        "dataDescription"?: string;
+        "dataImage"?: string;
+        "dataTitle"?: string;
         "side"?: sideType;
     }
     interface IntrinsicElements {

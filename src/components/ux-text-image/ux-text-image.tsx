@@ -1,5 +1,5 @@
-import { Component, h, Prop, State  } from '@stencil/core'
-import { textImageType, sideType } from './ux-text-image-type';
+import { Component, h, Prop  } from '@stencil/core'
+import { sideType } from './ux-text-image-type';
 
 @Component({
   tag: 'ux-text-image',
@@ -7,40 +7,33 @@ import { textImageType, sideType } from './ux-text-image-type';
 })
 
 export class UxTextImage {
-    @State() content: textImageType[]
-
-    @Prop() contentList: string
+    @Prop() dataImage: string
+    @Prop() dataTitle: string
+    @Prop() dataDescription: string
+    @Prop() dataButtonHref: string
+    @Prop() dataButtonLabel: string
     @Prop() side: sideType
     
-    componentWillLoad() {
-       this.content = eval(this.contentList)
-    } 
-
     render() {
     return (
         <section class="ux-text-image">
-            {this.content.map(element => {
-                return(
-                    <div class={`container ${this.side}`}>
-                        <div class="image-container">
-                            <img src={element?.image?.src} alt={element?.image?.alt} class="img" loading="lazy"/>
-                        </div>
+            <div class={`container ${this.side}`}>
+                <div class="image-container">
+                    <img src={this.dataImage} alt={null} class="img" loading="lazy"/>
+                </div>
 
-                        <div class="infos">
-                            <h2 class="title">
-                                {element?.title}
-                            </h2>
-                            <p class="description">
-                                {element?.description}
-                            </p>
-                            <a href={element?.href} class="button">
-                                {element?.buttonLabel}
-                            </a>
-                        </div>
-
-                    </div>
-                )
-            })}
+                <div class="infos">
+                    <h2 class="title">
+                        {this.dataTitle}
+                    </h2>
+                    <p class="description">
+                        {this.dataDescription}
+                    </p>
+                    <a href={this.dataButtonHref} class="button">
+                        {this.dataButtonLabel}
+                    </a>
+                </div>
+            </div>
         </section>
     );
     }
