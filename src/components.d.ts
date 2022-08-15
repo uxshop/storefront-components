@@ -8,7 +8,7 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { sideType } from "./components/ux-text-image/ux-text-image-type";
 export namespace Components {
     interface UxBanners {
-        "imagesList": string;
+        "dataImages": string;
     }
     interface UxTestimonials {
         "dataDescription": string;
@@ -16,7 +16,11 @@ export namespace Components {
         "dataTitle": string;
     }
     interface UxTextImage {
-        "contentList": string;
+        "dataButtonHref": string;
+        "dataButtonLabel": string;
+        "dataDescription": string;
+        "dataImage": string;
+        "dataTitle": string;
         "side": sideType;
     }
 }
@@ -47,7 +51,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface UxBanners {
-        "imagesList"?: string;
+        "dataImages"?: string;
     }
     interface UxTestimonials {
         "dataDescription"?: string;
@@ -55,9 +59,14 @@ declare namespace LocalJSX {
         "dataTitle"?: string;
     }
     interface UxTextImage {
-        "contentList"?: string;
+        "dataButtonHref"?: string;
+        "dataButtonLabel"?: string;
+        "dataDescription"?: string;
+        "dataImage"?: string;
+        "dataTitle"?: string;
         "side"?: sideType;
     }
+
     interface IntrinsicElements {
         "ux-banners": UxBanners;
         "ux-testimonials": UxTestimonials;
