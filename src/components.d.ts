@@ -8,7 +8,7 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { sideType } from "./components/ux-text-image/ux-text-image-type";
 export namespace Components {
     interface UxBanners {
-        "imagesList": string;
+        "dataImages": string;
     }
     interface UxTestimonials {
         "description": string;
@@ -59,7 +59,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface UxBanners {
-        "imagesList"?: string;
+        "dataImages"?: string;
     }
     interface UxTestimonials {
         "description"?: string;
