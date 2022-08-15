@@ -16,7 +16,11 @@ export namespace Components {
         "title": string;
     }
     interface UxTextImage {
-        "contentList": string;
+        "dataButtonHref": string;
+        "dataButtonLabel": string;
+        "dataDescription": string;
+        "dataImage": string;
+        "dataTitle": string;
         "side": sideType;
     }
     interface UxVideo {
@@ -67,7 +71,11 @@ declare namespace LocalJSX {
         "title"?: string;
     }
     interface UxTextImage {
-        "contentList"?: string;
+        "dataButtonHref"?: string;
+        "dataButtonLabel"?: string;
+        "dataDescription"?: string;
+        "dataImage"?: string;
+        "dataTitle"?: string;
         "side"?: sideType;
     }
     interface UxVideo {
