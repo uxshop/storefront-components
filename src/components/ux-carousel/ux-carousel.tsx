@@ -1,5 +1,4 @@
 import { Component, h, Prop } from "@stencil/core"
-import { carouselSettngsType } from "./ux-carousel-type"
 import Splide from '@splidejs/splide'
 @Component({
     tag: 'ux-carousel',
@@ -7,17 +6,17 @@ import Splide from '@splidejs/splide'
 })
 
 export class UxCarousel {
-    @Prop() rewind: carouselSettngsType
-    @Prop() autoplay: carouselSettngsType
-    @Prop() arrows: carouselSettngsType
-    @Prop() pagination: carouselSettngsType
+    @Prop() rewind: boolean
+    @Prop() autoplay: boolean
+    @Prop() arrows: boolean
+    @Prop() pagination: boolean
 
     componentDidRender() {
         new Splide('.splide', {
-            rewind: eval(this.rewind),
-            autoplay: eval(this.autoplay),
-            arrows: eval(this.arrows),
-            pagination: eval(this.pagination)
+            rewind: this?.rewind,
+            autoplay: this?.autoplay,
+            arrows: this?.arrows,
+            pagination: this?.pagination
         }).mount();
     }
 

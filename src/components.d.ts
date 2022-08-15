@@ -5,28 +5,24 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { carouselSettngsType } from "./components/ux-carousel/ux-carousel-type";
-import { textAlignType } from "./components/ux-carousel-item/ux-carousel-item-type";
 import { sideType } from "./components/ux-text-image/ux-text-image-type";
 export namespace Components {
     interface UxBanners {
-        "imagesList": string;
+        "dataImages": string;
     }
     interface UxCarousel {
-        "arrows": carouselSettngsType;
-        "autoplay": carouselSettngsType;
-        "pagination": carouselSettngsType;
-        "rewind": carouselSettngsType;
+        "arrows": boolean;
+        "autoplay": boolean;
+        "pagination": boolean;
+        "rewind": boolean;
     }
     interface UxCarouselItem {
-        "alt"?: string;
-        "bannerTitle"?: string;
-        "buttonHref"?: string;
-        "buttonLabel"?: string;
-        "description"?: string;
-        "desktopSrc"?: string;
-        "mobileSrc"?: string;
-        "textAlign"?: textAlignType;
+        "dataButtonHref"?: string;
+        "dataButtonLabel"?: string;
+        "dataDescription"?: string;
+        "dataDesktopImage"?: string;
+        "dataMobileImage"?: string;
+        "dataTitle"?: string;
     }
     interface UxShowcase {
     }
@@ -41,18 +37,17 @@ export namespace Components {
         "dataPriceCompare"?: number;
     }
     interface UxTestimonials {
-        "description": string;
-        "testimonialsList": string;
-        "title": string;
+        "dataDescription": string;
+        "dataTestimonials": string;
+        "dataTitle": string;
     }
     interface UxTextImage {
-        "contentList": string;
+        "dataButtonHref": string;
+        "dataButtonLabel": string;
+        "dataDescription": string;
+        "dataImage": string;
+        "dataTitle": string;
         "side": sideType;
-    }
-    interface UxVideo {
-        "description": string;
-        "src": string;
-        "title": string;
     }
 }
 declare global {
@@ -98,12 +93,6 @@ declare global {
         prototype: HTMLUxTextImageElement;
         new (): HTMLUxTextImageElement;
     };
-    interface HTMLUxVideoElement extends Components.UxVideo, HTMLStencilElement {
-    }
-    var HTMLUxVideoElement: {
-        prototype: HTMLUxVideoElement;
-        new (): HTMLUxVideoElement;
-    };
     interface HTMLElementTagNameMap {
         "ux-banners": HTMLUxBannersElement;
         "ux-carousel": HTMLUxCarouselElement;
@@ -112,28 +101,25 @@ declare global {
         "ux-showcase-item": HTMLUxShowcaseItemElement;
         "ux-testimonials": HTMLUxTestimonialsElement;
         "ux-text-image": HTMLUxTextImageElement;
-        "ux-video": HTMLUxVideoElement;
     }
 }
 declare namespace LocalJSX {
     interface UxBanners {
-        "imagesList"?: string;
+        "dataImages"?: string;
     }
     interface UxCarousel {
-        "arrows"?: carouselSettngsType;
-        "autoplay"?: carouselSettngsType;
-        "pagination"?: carouselSettngsType;
-        "rewind"?: carouselSettngsType;
+        "arrows"?: boolean;
+        "autoplay"?: boolean;
+        "pagination"?: boolean;
+        "rewind"?: boolean;
     }
     interface UxCarouselItem {
-        "alt"?: string;
-        "bannerTitle"?: string;
-        "buttonHref"?: string;
-        "buttonLabel"?: string;
-        "description"?: string;
-        "desktopSrc"?: string;
-        "mobileSrc"?: string;
-        "textAlign"?: textAlignType;
+        "dataButtonHref"?: string;
+        "dataButtonLabel"?: string;
+        "dataDescription"?: string;
+        "dataDesktopImage"?: string;
+        "dataMobileImage"?: string;
+        "dataTitle"?: string;
     }
     interface UxShowcase {
     }
@@ -148,19 +134,19 @@ declare namespace LocalJSX {
         "dataPriceCompare"?: number;
     }
     interface UxTestimonials {
-        "description"?: string;
-        "testimonialsList"?: string;
-        "title"?: string;
+        "dataDescription"?: string;
+        "dataTestimonials"?: string;
+        "dataTitle"?: string;
     }
     interface UxTextImage {
-        "contentList"?: string;
+        "dataButtonHref"?: string;
+        "dataButtonLabel"?: string;
+        "dataDescription"?: string;
+        "dataImage"?: string;
+        "dataTitle"?: string;
         "side"?: sideType;
     }
-    interface UxVideo {
-        "description"?: string;
-        "src"?: string;
-        "title"?: string;
-    }
+
     interface IntrinsicElements {
         "ux-banners": UxBanners;
         "ux-carousel": UxCarousel;
@@ -169,7 +155,6 @@ declare namespace LocalJSX {
         "ux-showcase-item": UxShowcaseItem;
         "ux-testimonials": UxTestimonials;
         "ux-text-image": UxTextImage;
-        "ux-video": UxVideo;
     }
 }
 export { LocalJSX as JSX };
@@ -183,7 +168,6 @@ declare module "@stencil/core" {
             "ux-showcase-item": LocalJSX.UxShowcaseItem & JSXBase.HTMLAttributes<HTMLUxShowcaseItemElement>;
             "ux-testimonials": LocalJSX.UxTestimonials & JSXBase.HTMLAttributes<HTMLUxTestimonialsElement>;
             "ux-text-image": LocalJSX.UxTextImage & JSXBase.HTMLAttributes<HTMLUxTextImageElement>;
-            "ux-video": LocalJSX.UxVideo & JSXBase.HTMLAttributes<HTMLUxVideoElement>;
         }
     }
 }
