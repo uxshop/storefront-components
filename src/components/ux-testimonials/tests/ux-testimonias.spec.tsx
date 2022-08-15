@@ -7,7 +7,7 @@ describe('ux-testimonials', () => {
         const page = await newSpecPage({
             components: [UxTestimonials],
             html: `<ux-testimonials></ux-testimonials>`,
-            template: () => (<ux-testimonials title="" description="" testimonials-list="[]"></ux-testimonials>)
+            template: () => (<ux-testimonials data-title="" data-description="" data-testimonials="[]"></ux-testimonials>)
         })
         expect(page.root).toBeTruthy()
     })
