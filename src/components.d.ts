@@ -24,6 +24,18 @@ export namespace Components {
         "dataMobileImage"?: string;
         "dataTitle"?: string;
     }
+    interface UxShowcase {
+    }
+    interface UxShowcaseItem {
+        "dataHasInterest"?: boolean;
+        "dataHref": string;
+        "dataImage": string;
+        "dataName": string;
+        "dataParcelPrice"?: number;
+        "dataParcels"?: number;
+        "dataPrice": number;
+        "dataPriceCompare"?: number;
+    }
     interface UxTestimonials {
         "dataDescription": string;
         "dataTestimonials": string;
@@ -57,6 +69,18 @@ declare global {
         prototype: HTMLUxCarouselItemElement;
         new (): HTMLUxCarouselItemElement;
     };
+    interface HTMLUxShowcaseElement extends Components.UxShowcase, HTMLStencilElement {
+    }
+    var HTMLUxShowcaseElement: {
+        prototype: HTMLUxShowcaseElement;
+        new (): HTMLUxShowcaseElement;
+    };
+    interface HTMLUxShowcaseItemElement extends Components.UxShowcaseItem, HTMLStencilElement {
+    }
+    var HTMLUxShowcaseItemElement: {
+        prototype: HTMLUxShowcaseItemElement;
+        new (): HTMLUxShowcaseItemElement;
+    };
     interface HTMLUxTestimonialsElement extends Components.UxTestimonials, HTMLStencilElement {
     }
     var HTMLUxTestimonialsElement: {
@@ -73,6 +97,8 @@ declare global {
         "ux-banners": HTMLUxBannersElement;
         "ux-carousel": HTMLUxCarouselElement;
         "ux-carousel-item": HTMLUxCarouselItemElement;
+        "ux-showcase": HTMLUxShowcaseElement;
+        "ux-showcase-item": HTMLUxShowcaseItemElement;
         "ux-testimonials": HTMLUxTestimonialsElement;
         "ux-text-image": HTMLUxTextImageElement;
     }
@@ -95,6 +121,18 @@ declare namespace LocalJSX {
         "dataMobileImage"?: string;
         "dataTitle"?: string;
     }
+    interface UxShowcase {
+    }
+    interface UxShowcaseItem {
+        "dataHasInterest"?: boolean;
+        "dataHref"?: string;
+        "dataImage"?: string;
+        "dataName"?: string;
+        "dataParcelPrice"?: number;
+        "dataParcels"?: number;
+        "dataPrice"?: number;
+        "dataPriceCompare"?: number;
+    }
     interface UxTestimonials {
         "dataDescription"?: string;
         "dataTestimonials"?: string;
@@ -113,6 +151,8 @@ declare namespace LocalJSX {
         "ux-banners": UxBanners;
         "ux-carousel": UxCarousel;
         "ux-carousel-item": UxCarouselItem;
+        "ux-showcase": UxShowcase;
+        "ux-showcase-item": UxShowcaseItem;
         "ux-testimonials": UxTestimonials;
         "ux-text-image": UxTextImage;
     }
@@ -124,6 +164,8 @@ declare module "@stencil/core" {
             "ux-banners": LocalJSX.UxBanners & JSXBase.HTMLAttributes<HTMLUxBannersElement>;
             "ux-carousel": LocalJSX.UxCarousel & JSXBase.HTMLAttributes<HTMLUxCarouselElement>;
             "ux-carousel-item": LocalJSX.UxCarouselItem & JSXBase.HTMLAttributes<HTMLUxCarouselItemElement>;
+            "ux-showcase": LocalJSX.UxShowcase & JSXBase.HTMLAttributes<HTMLUxShowcaseElement>;
+            "ux-showcase-item": LocalJSX.UxShowcaseItem & JSXBase.HTMLAttributes<HTMLUxShowcaseItemElement>;
             "ux-testimonials": LocalJSX.UxTestimonials & JSXBase.HTMLAttributes<HTMLUxTestimonialsElement>;
             "ux-text-image": LocalJSX.UxTextImage & JSXBase.HTMLAttributes<HTMLUxTextImageElement>;
         }

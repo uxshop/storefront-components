@@ -1,0 +1,107 @@
+@import "../../assets/styles/variables";
+
+.ux-showcase-item{
+    display: flex;
+    padding: 8px;
+    width: 170px;
+    min-height: 290px;
+    font-family: $base-font;
+    cursor: pointer;
+    text-align: left;
+
+    .image-container{
+        position: relative;
+        width: 100%;
+        height: auto;
+
+        .img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        .btn{
+            background-color: #4FBFA4;
+            color: transparent;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            transition: height 0.3s;
+            border-radius: 6px;
+            height: 0px;
+        }
+
+        .btn:hover{
+            background-color: #55cbaf;
+        }
+    }
+
+    .card-infos{
+        display: flex;
+        flex-direction: column;
+
+        .name{
+            font-size: $font-title-mob;
+            margin: 6px 0;
+        }
+
+        .payment{
+            display: flex;
+            flex-direction: column;
+            font-size: $font-text-mob;
+
+            .prices{
+                display: flex;
+                flex-direction: column;
+
+                .price-compare{
+                    color: #797979;
+                    text-decoration: line-through;
+                }
+
+                .price{
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+.ux-showcase-item:hover .btn{
+    height: 36px;
+    color: white
+}
+
+@media(min-width: $tablet-small){
+    .ux-showcase-item{
+        width: 230px;
+
+        .card-infos{
+            .name{
+                font-size: 18px;
+                margin: 6px 0 14px 0;
+            }
+
+            .payment{
+                font-size: $font-text-desk;
+                
+                .prices{
+                    flex-direction: row;
+                    align-items: flex-end;
+                    gap: 8px;
+
+                    .price{
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+        
+    }
+}
