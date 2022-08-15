@@ -8,12 +8,12 @@ import { youtubeUrlFormatter } from '../../assets/helpers/youtubeUrlFormatter'
 export class UxVideo {
     @State() video : string
 
-    @Prop() title: string
-    @Prop() description: string
-    @Prop() src: string
+    @Prop() dataTitle: string
+    @Prop() dataDescription: string
+    @Prop() dataSrc: string
 
     componentWillLoad(){
-        this.video = youtubeUrlFormatter(this.src)
+        this.video = youtubeUrlFormatter(this.dataSrc)
     }
 
     render(){
@@ -21,8 +21,8 @@ export class UxVideo {
             <section class="ux-video">
                 <div class="content">
                     <div class="infos">
-                        <h2 class="title">{this?.title}</h2>
-                        <p class="description">{this?.description}</p>
+                        <h2 class="title">{this?.dataTitle}</h2>
+                        <p class="description">{this?.dataDescription}</p>
                     </div>
                     <div class="video-container">
                         <iframe 

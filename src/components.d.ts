@@ -8,7 +8,7 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { sideType } from "./components/ux-text-image/ux-text-image-type";
 export namespace Components {
     interface UxBanners {
-        "imagesList": string;
+        "dataImages": string;
     }
     interface UxCarousel {
         "arrows": boolean;
@@ -25,18 +25,17 @@ export namespace Components {
         "dataTitle"?: string;
     }
     interface UxTestimonials {
-        "description": string;
-        "testimonialsList": string;
-        "title": string;
+        "dataDescription": string;
+        "dataTestimonials": string;
+        "dataTitle": string;
     }
     interface UxTextImage {
-        "contentList": string;
+        "dataButtonHref": string;
+        "dataButtonLabel": string;
+        "dataDescription": string;
+        "dataImage": string;
+        "dataTitle": string;
         "side": sideType;
-    }
-    interface UxVideo {
-        "description": string;
-        "src": string;
-        "title": string;
     }
 }
 declare global {
@@ -70,24 +69,17 @@ declare global {
         prototype: HTMLUxTextImageElement;
         new (): HTMLUxTextImageElement;
     };
-    interface HTMLUxVideoElement extends Components.UxVideo, HTMLStencilElement {
-    }
-    var HTMLUxVideoElement: {
-        prototype: HTMLUxVideoElement;
-        new (): HTMLUxVideoElement;
-    };
     interface HTMLElementTagNameMap {
         "ux-banners": HTMLUxBannersElement;
         "ux-carousel": HTMLUxCarouselElement;
         "ux-carousel-item": HTMLUxCarouselItemElement;
         "ux-testimonials": HTMLUxTestimonialsElement;
         "ux-text-image": HTMLUxTextImageElement;
-        "ux-video": HTMLUxVideoElement;
     }
 }
 declare namespace LocalJSX {
     interface UxBanners {
-        "imagesList"?: string;
+        "dataImages"?: string;
     }
     interface UxCarousel {
         "arrows"?: boolean;
@@ -104,26 +96,25 @@ declare namespace LocalJSX {
         "dataTitle"?: string;
     }
     interface UxTestimonials {
-        "description"?: string;
-        "testimonialsList"?: string;
-        "title"?: string;
+        "dataDescription"?: string;
+        "dataTestimonials"?: string;
+        "dataTitle"?: string;
     }
     interface UxTextImage {
-        "contentList"?: string;
+        "dataButtonHref"?: string;
+        "dataButtonLabel"?: string;
+        "dataDescription"?: string;
+        "dataImage"?: string;
+        "dataTitle"?: string;
         "side"?: sideType;
     }
-    interface UxVideo {
-        "description"?: string;
-        "src"?: string;
-        "title"?: string;
-    }
+
     interface IntrinsicElements {
         "ux-banners": UxBanners;
         "ux-carousel": UxCarousel;
         "ux-carousel-item": UxCarouselItem;
         "ux-testimonials": UxTestimonials;
         "ux-text-image": UxTextImage;
-        "ux-video": UxVideo;
     }
 }
 export { LocalJSX as JSX };
@@ -135,7 +126,6 @@ declare module "@stencil/core" {
             "ux-carousel-item": LocalJSX.UxCarouselItem & JSXBase.HTMLAttributes<HTMLUxCarouselItemElement>;
             "ux-testimonials": LocalJSX.UxTestimonials & JSXBase.HTMLAttributes<HTMLUxTestimonialsElement>;
             "ux-text-image": LocalJSX.UxTextImage & JSXBase.HTMLAttributes<HTMLUxTextImageElement>;
-            "ux-video": LocalJSX.UxVideo & JSXBase.HTMLAttributes<HTMLUxVideoElement>;
         }
     }
 }

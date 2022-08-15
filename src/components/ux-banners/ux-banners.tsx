@@ -1,16 +1,16 @@
-import { Component, h, Prop, State } from '@stencil/core';
-import { imagesBanner } from './ux-banners-type';
+import { Component, h, Prop, State } from '@stencil/core'
+import { imagesBanner } from './ux-banners-type'
 
 @Component({
   tag: 'ux-banners',
   styleUrl: 'ux-banners.scss'
 })
 export class UxBanners {
-  @State() list: imagesBanner[];
-  @Prop() imagesList: string;
+  @State() list: imagesBanner[]
+  @Prop() dataImages: string
 
   componentWillLoad() {
-    this.list = eval(this.imagesList);
+    this.list = JSON.parse(this.dataImages)
   }
 
   render() {

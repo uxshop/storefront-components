@@ -9,20 +9,20 @@ import { testimonialsType } from "./ux-testimonials-type";
 export class UxTestimonials{
     @State() testimonials: testimonialsType[]
 
-    @Prop() title: string
-    @Prop() description: string
-    @Prop() testimonialsList: string
+    @Prop() dataTitle: string
+    @Prop() dataDescription: string
+    @Prop() dataTestimonials: string
 
     componentWillLoad() {
-        this.testimonials = eval(this.testimonialsList)
+        this.testimonials = JSON.parse(this.dataTestimonials)
     }
 
     render(){
         return(
             <section class="ux-testimonials">
                 <div class="infos">
-                    <h2 class="title">{this?.title}</h2>
-                    <p class="description">{this?.description}</p>
+                    <h2 class="title">{this?.dataTitle}</h2>
+                    <p class="description">{this?.dataDescription}</p>
                 </div>
                 <div class="testimonials-container">
                     {this.testimonials.map(testimonial => {
