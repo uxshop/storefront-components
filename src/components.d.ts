@@ -49,6 +49,11 @@ export namespace Components {
         "dataTitle": string;
         "side": sideType;
     }
+    interface UxVideo {
+        "dataDescription": string;
+        "dataSrc": string;
+        "dataTitle": string;
+    }
 }
 declare global {
     interface HTMLUxBannersElement extends Components.UxBanners, HTMLStencilElement {
@@ -93,6 +98,12 @@ declare global {
         prototype: HTMLUxTextImageElement;
         new (): HTMLUxTextImageElement;
     };
+    interface HTMLUxVideoElement extends Components.UxVideo, HTMLStencilElement {
+    }
+    var HTMLUxVideoElement: {
+        prototype: HTMLUxVideoElement;
+        new (): HTMLUxVideoElement;
+    };
     interface HTMLElementTagNameMap {
         "ux-banners": HTMLUxBannersElement;
         "ux-carousel": HTMLUxCarouselElement;
@@ -101,6 +112,7 @@ declare global {
         "ux-showcase-item": HTMLUxShowcaseItemElement;
         "ux-testimonials": HTMLUxTestimonialsElement;
         "ux-text-image": HTMLUxTextImageElement;
+        "ux-video": HTMLUxVideoElement;
     }
 }
 declare namespace LocalJSX {
@@ -146,7 +158,11 @@ declare namespace LocalJSX {
         "dataTitle"?: string;
         "side"?: sideType;
     }
-
+    interface UxVideo {
+        "dataDescription"?: string;
+        "dataSrc"?: string;
+        "dataTitle"?: string;
+    }
     interface IntrinsicElements {
         "ux-banners": UxBanners;
         "ux-carousel": UxCarousel;
@@ -155,6 +171,7 @@ declare namespace LocalJSX {
         "ux-showcase-item": UxShowcaseItem;
         "ux-testimonials": UxTestimonials;
         "ux-text-image": UxTextImage;
+        "ux-video": UxVideo;
     }
 }
 export { LocalJSX as JSX };
@@ -168,6 +185,7 @@ declare module "@stencil/core" {
             "ux-showcase-item": LocalJSX.UxShowcaseItem & JSXBase.HTMLAttributes<HTMLUxShowcaseItemElement>;
             "ux-testimonials": LocalJSX.UxTestimonials & JSXBase.HTMLAttributes<HTMLUxTestimonialsElement>;
             "ux-text-image": LocalJSX.UxTextImage & JSXBase.HTMLAttributes<HTMLUxTextImageElement>;
+            "ux-video": LocalJSX.UxVideo & JSXBase.HTMLAttributes<HTMLUxVideoElement>;
         }
     }
 }

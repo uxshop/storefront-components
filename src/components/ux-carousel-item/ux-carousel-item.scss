@@ -39,6 +39,7 @@
         .button{
             @include button(#3B9BE0 ,#fff);
             text-decoration: none;
+            min-width: 140px;
         }
     }
 
@@ -57,18 +58,20 @@
 }
 
 @media(min-width: $tablet-large){
-    .infos{ 
-        width: 70%;
-        margin-left: $padding-medium;
-        align-items: flex-start !important;
-        text-align: left !important;
+    .ux-carousel-item{
+        >.infos{ 
+            width: 70%;
+            margin-left: $padding-medium;
+            align-items: flex-start !important;
+            text-align: left !important;
 
-        .title{
-            font-size: $font-title-desk;
-        }
+            .title{
+                font-size: $font-title-desk;
+            }
 
-        .description{
-            font-size: $font-text-desk;
+            .description{
+                font-size: $font-text-desk;
+            }
         }
     }
 }

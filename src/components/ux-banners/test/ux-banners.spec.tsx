@@ -7,7 +7,7 @@ describe('ux-banner', () => {
     const page = await newSpecPage({
       components: [UxBanners],
       html: `<ux-banners></ux-banners>`,
-      template: () => ( <ux-banners images-list="[]"></ux-banners>)
+      template: () => ( <ux-banners data-images="[]"></ux-banners>)
     });
     expect(page.root).toBeTruthy()
   });
