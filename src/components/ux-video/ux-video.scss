@@ -1,61 +1,65 @@
-@import "../../assets/styles/variables";
+@import '../../assets/styles/variables';
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.ux-video{
-    .content{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: $padding-medium;
-        gap: $gap-large;
+.ux-video {
+  .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: $padding-medium;
+    row-gap: $gap-small;
 
-        .infos{
-            text-align: center;
-            font-family: $base-font;
+    .infos {
+      text-align: center;
+      font-family: $base-font;
 
-            .title{
-                font-size: $font-title-mob;
-            }
+      .title {
+        font-size: $font-title-mob;
+        padding-bottom: $padding-extra-small;
+      }
 
-            .description{
-                font-size: $font-text-mob;
-                padding-top: $padding-small;
-            }
-        }
-
-        .video-container{
-            width: 100%;
-        }
-    }
-}
-
-@media (min-width: $mobile-large){
-    .video-container{
-        max-width: $mobile-large;
-        height: 250px;
-    }
-}
-
-@media (min-width: $tablet-small){
-    .video-container{
-        max-width: $tablet-small;
-        height: 450px;
-    }
-}
-
-@media (min-width: $tablet-large){
-    .title{
-            font-size: $font-title-desk !important;
+      .description {
+        font-size: $font-text-mob;
+      }
     }
 
-    .description{
-        font-size: $font-text-desk !important;
+    .video-container {
+      width: 100%;
     }
+  }
+
+  @media (min-width: $mobile-large) {
+    .video-container {
+      max-width: $mobile-large;
+      height: 250px;
+    }
+
+    .content {
+      row-gap: $gap-large;
+    }
+  }
+
+  @media (min-width: $tablet-small) {
+    .video-container {
+      max-width: $tablet-small;
+      height: 450px;
+    }
+  }
+
+  @media (min-width: $tablet-large) {
+    .title {
+      font-size: $font-title-desk;
+    }
+
+    .description {
+      font-size: $font-text-desk;
+    }
+  }
 }

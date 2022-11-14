@@ -1,34 +1,38 @@
-import { Component, h, Prop } from "@stencil/core"
-import Splide from '@splidejs/splide'
+import { Component, h, Prop } from '@stencil/core';
+import Splide from '@splidejs/splide';
 @Component({
-    tag: 'ux-carousel',
-    styleUrl: 'ux-carousel.scss',
+  tag: 'ux-carousel',
+  styleUrl: 'ux-carousel.scss'
 })
-
 export class UxCarousel {
-    @Prop() rewind: boolean
-    @Prop() autoplay: boolean
-    @Prop() arrows: boolean
-    @Prop() pagination: boolean
+  @Prop() rewind: boolean;
+  @Prop() autoplay: boolean;
+  @Prop() arrows: boolean;
+  @Prop() pagination: boolean;
 
-    componentDidRender() {
-        new Splide('.splide', {
-            rewind: this?.rewind,
-            autoplay: this?.autoplay,
-            arrows: this?.arrows,
-            pagination: this?.pagination
-        }).mount();
-    }
+  componentDidRender() {
+    new Splide('.splide', {
+      rewind: this?.rewind,
+      autoplay: this?.autoplay,
+      arrows: this?.arrows,
+      pagination: this?.pagination,
+      breakpoints: {
+        768: {
+          arrows: false
+        }
+      }
+    }).mount();
+  }
 
-    render() {
-        return (
-            <section class="ux-carousel splide">
-                <div class="splide__track">
-                    <div class="splide__list">
-                        <slot></slot>
-                    </div>
-                </div>
-            </section>
-        )
-    }
+  render() {
+    return (
+      <section class="ux-carousel splide">
+        <div class="splide__track">
+          <div class="splide__list">
+            <slot></slot>
+          </div>
+        </div>
+      </section>
+    );
+  }
 }
