@@ -1,0 +1,49 @@
+{
+  "name": "Item do carrossel",
+  "type": "content",
+  "category": "Multimídia",
+  "settings": [
+    {
+      "id": "dataMobileImage",
+      "type": "image_picker",
+      "tab": "Conteúdo",
+      "group": "Conteúdo",
+      "label": "Imagem (mobile)"
+    },
+    {
+      "id": "dataDesktopImage",
+      "type": "image_picker",
+      "tab": "Conteúdo",
+      "group": "Conteúdo",
+      "label": "Imagem (desktop)"
+    },
+    {
+      "id": "dataTitle",
+      "type": "text",
+      "tab": "Conteúdo",
+      "group": "Conteúdo",
+      "label": "Título"
+    },
+    {
+      "id": "dataDescription",
+      "type": "textarea",
+      "tab": "Conteúdo",
+      "group": "Conteúdo",
+      "label": "Descrição"
+    },
+    {
+      "id": "dataButtonLabel",
+      "type": "text",
+      "tab": "Conteúdo",
+      "group": "Conteúdo",
+      "label": "Texto do botão"
+    },
+    {
+      "id": "dataButtonHref",
+      "type": "url",
+      "tab": "Conteúdo",
+      "group": "Conteúdo",
+      "label": "Link do botão"
+    }
+  ]
+}

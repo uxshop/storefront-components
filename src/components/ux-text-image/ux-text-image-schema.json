@@ -1,0 +1,59 @@
+{
+  "name": "Texto e imagem",
+  "type": "content",
+  "category": "Multimídia",
+  "settings": [
+    {
+      "id": "dataImage",
+      "type": "image_picker",
+      "tab": "Conteúdo",
+      "group": "Conteúdo",
+      "label": "Imagem"
+    },
+    {
+      "id": "dataTitle",
+      "type": "text",
+      "tab": "Conteúdo",
+      "group": "Conteúdo",
+      "label": "Título"
+    },
+    {
+      "id": "dataDescription",
+      "type": "textarea",
+      "tab": "Conteúdo",
+      "group": "Conteúdo",
+      "label": "Texto"
+    },
+    {
+      "id": "dataButtonLabel",
+      "type": "text",
+      "tab": "Conteúdo",
+      "group": "Conteúdo",
+      "label": "Texto do botão"
+    },
+    {
+      "id": "dataButtonHref",
+      "type": "url",
+      "tab": "Conteúdo",
+      "group": "Conteúdo",
+      "label": "Link do botão"
+    },
+    {
+      "id": "side",
+      "type": "select",
+      "tab": "Conteúdo",
+      "group": "Conteúdo",
+      "label": "Direção da seção",
+      "options": [
+        {
+          "label": "Direita",
+          "value": "left"
+        },
+        {
+          "label": "Esquerda",
+          "value": "right"
+        }
+      ]
+    }
+  ]
+}

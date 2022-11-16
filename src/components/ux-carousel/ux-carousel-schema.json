@@ -1,0 +1,35 @@
+{
+  "name": "Carrossel",
+  "type": "content",
+  "category": "Multimídia",
+  "settings": [
+    {
+      "id": "rewind",
+      "type": "checkbox",
+      "tab": "Conteúdo",
+      "group": "Conteúdo",
+      "label": "Rebobinar carrossel"
+    },
+    {
+      "id": "autoplay",
+      "type": "checkbox",
+      "tab": "Conteúdo",
+      "group": "Conteúdo",
+      "label": "Rodar carrossel automaticamente"
+    },
+    {
+      "id": "arrows",
+      "type": "checkbox",
+      "tab": "Conteúdo",
+      "group": "Conteúdo",
+      "label": "Flechas do carrossel"
+    },
+    {
+      "id": "pagination",
+      "type": "checkbox",
+      "tab": "Conteúdo",
+      "group": "Conteúdo",
+      "label": "Seletor de página do carrossel"
+    }
+  ]
+}

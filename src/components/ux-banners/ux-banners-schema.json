@@ -1,0 +1,35 @@
+{
+  "name": "Banners",
+  "type": "content",
+  "category": "Multimídia",
+  "blocks_name": "Imagens",
+  "blocks_max": 3,
+  "blocks": {
+    "image": {
+      "name": "Imagem",
+      "settings": [
+        {
+          "id": "srcMobile",
+          "type": "image_picker",
+          "tab": "Conteúdo",
+          "group": "Conteúdo",
+          "label": "Imagem (mobile)"
+        },
+        {
+          "id": "srcDesktop",
+          "type": "image_picker",
+          "tab": "Conteúdo",
+          "group": "Conteúdo",
+          "label": "Imagem (desktop)"
+        },
+        {
+          "id": "alt",
+          "type": "text",
+          "tab": "Conteúdo",
+          "group": "Conteúdo",
+          "label": "Sobre a imagem"
+        }
+      ]
+    }
+  }
+}
