@@ -1,0 +1,28 @@
+{
+  "name": "Video",
+  "type": "content",
+  "category": "Multimídia",
+  "settings": [
+    {
+      "id": "dataTitle",
+      "type": "text",
+      "tab": "Conteúdo",
+      "group": "Conteúdo",
+      "label": "Título do vídeo"
+    },
+    {
+      "id": "dataDescription",
+      "type": "textarea",
+      "tab": "Conteúdo",
+      "group": "Conteúdo",
+      "label": "Descrição do vídeo"
+    },
+    {
+      "id": "dataSrc",
+      "type": "video",
+      "tab": "Conteúdo",
+      "group": "Conteúdo",
+      "label": "Link do vídeo"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "name": "Vitrine de produtos",
+  "type": "content",
+  "category": "Multimídia",
+  "settings": [
+    {
+      "id": "dataHref",
+      "type": "url",
+      "tab": "Conteúdo",
+      "group": "Conteúdo",
+      "label": "Link do produto"
+    },
+    {
+      "id": "dataImage",
+      "type": "image_picker",
+      "tab": "Conteúdo",
+      "group": "Conteúdo",
+      "label": "Imagem do produto"
+    },
+    {
+      "id": "dataName",
+      "type": "text",
+      "tab": "Conteúdo",
+      "group": "Conteúdo",
+      "label": "Nome do produto"
+    },
+    {
+      "id": "dataPriceCompare",
+      "type": "text",
+      "tab": "Conteúdo",
+      "group": "Conteúdo",
+      "label": "Preço original do produto"
+    },
+    {
+      "id": "dataPrice",
+      "type": "text",
+      "tab": "Conteúdo",
+      "group": "Conteúdo",
+      "label": "Preço do produto"
+    },
+    {
+      "id": "dataParcels",
+      "type": "text",
+      "tab": "Conteúdo",
+      "group": "Conteúdo",
+      "label": "Quantidade de parcelas do produto"
+    },
+    {
+      "id": "dataParcelPrice",
+      "type": "text",
+      "tab": "Conteúdo",
+      "group": "Conteúdo",
+      "label": "Valor das parcelas do produto"
+    },
+    {
+      "id": "dataHasInterest",
+      "type": "toggle",
+      "tab": "Conteúdo",
+      "group": "Conteúdo",
+      "label": "Juros nas parcelas do produto"
+    }
+  ]
+}
