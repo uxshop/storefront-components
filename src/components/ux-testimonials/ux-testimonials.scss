@@ -1,70 +1,73 @@
-@import "../../assets/styles/variables";
+@import '../../assets/styles/variables';
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.ux-testimonials{
-    width: 100%;
-    padding: $padding-medium;
+.ux-testimonials {
+  width: 100%;
+  padding: $padding-medium;
+  display: flex;
+  flex-direction: column;
+  gap: $gap-small;
+  font-family: $base-font;
+
+  .infos {
     display: flex;
     flex-direction: column;
-    gap: $gap-medium;
-    font-family: $base-font;
+    gap: $gap-extra-small;
 
-    .infos{
-        display: flex;
-        flex-direction: column;
-        gap: $gap-small;
-        text-align: center;
-
-        .title{
-            font-size: $font-title-mob;
-        }
-
-        .description{
-            font-size: $font-text-mob;
-        }
+    .title {
+      font-size: $font-title-mob;
     }
 
-    .testimonials-container{
-        .testimonial{
-            padding: $padding-small;
-
-            .message{
-                padding: $padding-small 0;
-                font-size: $font-text-mob;
-            }
-        }
-
-        .customer{
-            display: flex;
-            gap: $gap-small;
-            align-items: center;
-
-            .customer-icon{
-                max-width: 75px;
-            }
-        }
+    .description {
+      font-size: $font-text-mob;
     }
+  }
+
+  .testimonials-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+
+    .testimonial {
+      .message {
+        padding: 15px 0;
+        font-size: $font-text-mob;
+      }
+    }
+
+    .customer {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+
+      .customer-icon {
+        max-width: 75px;
+      }
+    }
+  }
 }
 
-@media(min-width: $tablet-small){
-    .ux-testimonials{
-        max-width: $desktop-small;
-        margin: auto;
+@media (min-width: $tablet-small) {
+  .ux-testimonials {
+    gap: $gap-large;
 
-        .testimonials-container{
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            justify-content: center;
-           
-            .testimonial{
-                max-width: $mobile-large;
-            }
-        }
+    .testimonials-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $gap-extra-small $gap-large;
     }
+
+    .message {
+      padding: $padding-small 0;
+    }
+
+    .customer {
+      column-gap: $gap-small;
+    }
+  }
 }
