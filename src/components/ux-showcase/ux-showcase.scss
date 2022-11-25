@@ -1,15 +1,16 @@
-@import "../../assets/styles/variables";
+@import '../../assets/styles/variables';
 
-.ux-showcase{
-    width: 100%;
-    padding: $padding-medium;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    
-    a{
-        text-decoration: none;
-        color: #000;
-    }
+.ux-showcase {
+  width: 100%;
+  padding: $padding-medium;
+  gap: $gap-small $gap-extra-small;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
 }
