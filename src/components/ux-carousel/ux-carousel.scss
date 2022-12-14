@@ -1,6 +1,7 @@
 @import '../../../node_modules/@splidejs/splide/src/css/template/default/index.scss';
 
-.ux-carousel{
-    width: 100%;
-    max-height: 800px;
+.ux-carousel {
+  display: flex;
+  width: 100%;
+  max-height: 800px;
 }
