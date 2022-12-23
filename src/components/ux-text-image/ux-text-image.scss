@@ -1,12 +1,6 @@
 @import '../../assets/styles/variables';
 @import '../../assets/styles/mixins/button';
 
-* {
-  margin: 0;
-  box-sizing: border-box;
-  font-family: $base-font;
-}
-
 .ux-text-image {
   width: 100%;
   padding: $padding-medium;

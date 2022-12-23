@@ -39,7 +39,7 @@
       "label": "Link do botão"
     },
     {
-      "id": "side",
+      "id": "dataSide",
       "type": "select",
       "tab": "Conteúdo",
       "group": "Conteúdo",
@@ -47,11 +47,11 @@
       "options": [
         {
           "label": "Direita",
-          "value": "left"
+          "value": "right"
         },
         {
           "label": "Esquerda",
-          "value": "right"
+          "value": "left"
         }
       ]
     }
