@@ -6,17 +6,17 @@ import { ShowcaseItem } from '../ux-showcase-item/ux-showcase-item-type';
   styleUrl: 'ux-showcase.scss'
 })
 export class UxShowcase {
-  @State() list: ShowcaseItem[];
+  @State() products: ShowcaseItem[];
   @Prop() dataImages: string;
 
   componentWillLoad() {
-    this.list = JSON.parse(this.dataImages);
+    this.products = JSON.parse(this.dataImages);
   }
 
   render() {
     return (
       <section class="ux-showcase">
-        {this.list.map(product => (
+        {this.products.map(product => (
           <ux-showcase-item
             dataHref={product.dataHref}
             dataImage={product.dataImage}

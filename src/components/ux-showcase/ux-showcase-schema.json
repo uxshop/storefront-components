@@ -3,7 +3,7 @@
   "type": "content",
   "category": "Multimídia",
   "blocks": {
-    "item": {
+    "product": {
       "name": "Produto",
       "settings": [
         {
