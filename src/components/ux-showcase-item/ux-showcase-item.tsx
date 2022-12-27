@@ -17,31 +17,29 @@ export class UxShowcaseItem {
 
   render() {
     return (
-      <div class="ux-showcase-item">
-        <a href={this.dataHref}>
-          <div class="image-container">
-            <img src={this.dataImage} alt={this.dataName} class="img" />
-            <a href={this.dataHref} class="btn">
-              comprar
-            </a>
-          </div>
-          <div class="card-infos">
-            <p class="name">{this.dataName}</p>
-            <div class="payment">
-              <div class="prices">
-                <span class="price-compare">{currencyFormatter(this.dataPriceCompare)}</span>
-                <span class="price">{currencyFormatter(this.dataPrice)}</span>
-              </div>
-              {this.dataParcels && (
-                <span class="price-installments">
-                  até {this.dataParcels}x de {currencyFormatter(this.dataParcelPrice)}
-                  {this.dataHasInterest ? ' com' : ' sem'} juros
-                </span>
-              )}
+      <a href={this.dataHref} class="ux-showcase-item">
+        <div class="image-container">
+          <img src={this.dataImage} alt={this.dataName} class="img" />
+          <a href={this.dataHref} class="btn">
+            comprar
+          </a>
+        </div>
+        <div class="card-infos">
+          <p class="name">{this.dataName}</p>
+          <div class="payment">
+            <div class="prices">
+              <span class="price-compare">{currencyFormatter(this.dataPriceCompare)}</span>
+              <span class="price">{currencyFormatter(this.dataPrice)}</span>
             </div>
+            {this.dataParcels && (
+              <span class="price-installments">
+                até {this.dataParcels}x de {currencyFormatter(this.dataParcelPrice)}
+                {this.dataHasInterest ? ' com' : ' sem'} juros
+              </span>
+            )}
           </div>
-        </a>
-      </div>
+        </div>
+      </a>
     );
   }
 }
