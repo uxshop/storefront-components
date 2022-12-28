@@ -1,15 +1,15 @@
-import { Component, h, Host, Prop } from '@stencil/core';
+import { Component, h, Host, Prop } from '@stencil/core'
 @Component({
   tag: 'ux-carousel-item',
   styleUrl: 'ux-carousel-item.scss'
 })
 export class UxCarouselItem {
-  @Prop() dataTitle?: string;
-  @Prop() dataDescription?: string;
-  @Prop() dataButtonLabel?: string;
-  @Prop() dataButtonHref?: string;
-  @Prop() dataDesktopImage?: string;
-  @Prop() dataMobileImage?: string;
+  @Prop() dataTitle?: string
+  @Prop() dataDescription?: string
+  @Prop() dataButtonLabel?: string
+  @Prop() dataButtonHref?: string
+  @Prop() dataDesktopImage?: string
+  @Prop() dataMobileImage?: string
 
   render() {
     return (
@@ -30,6 +30,6 @@ export class UxCarouselItem {
           </div>
         </div>
       </Host>
-    );
+    )
   }
 }

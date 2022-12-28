@@ -1,21 +1,21 @@
-import { Component, h, Prop, State } from '@stencil/core';
-import Splide from '@splidejs/splide';
-import { CarouselItem } from '../ux-carousel-item/ux-carousel-item-type';
+import { Component, h, Prop, State } from '@stencil/core'
+import Splide from '@splidejs/splide'
+import { CarouselItem } from '../ux-carousel-item/ux-carousel-item-type'
 @Component({
   tag: 'ux-carousel',
   styleUrl: 'ux-carousel.scss'
 })
 export class UxCarousel {
-  @Prop() dataRewind: boolean;
-  @Prop() dataAutoplay: boolean;
-  @Prop() dataArrows: boolean;
-  @Prop() dataPagination: boolean;
+  @Prop() dataRewind: boolean
+  @Prop() dataAutoplay: boolean
+  @Prop() dataArrows: boolean
+  @Prop() dataPagination: boolean
 
-  @State() items: CarouselItem[];
-  @Prop() dataItems: string;
+  @State() items: CarouselItem[]
+  @Prop() dataItems: string
 
   componentWillLoad() {
-    this.items = JSON.parse(this.dataItems);
+    this.items = JSON.parse(this.dataItems)
   }
 
   componentDidRender() {
@@ -29,7 +29,7 @@ export class UxCarousel {
           arrows: false
         }
       }
-    }).mount();
+    }).mount()
   }
 
   render() {
@@ -50,6 +50,6 @@ export class UxCarousel {
           </div>
         </div>
       </section>
-    );
+    )
   }
 }
