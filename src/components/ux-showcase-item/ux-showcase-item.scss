@@ -2,11 +2,12 @@
 
 .ux-showcase-item {
   display: flex;
-  width: 170px;
+  min-width: 170px;
   min-height: 290px;
   font-family: $base-font;
   cursor: pointer;
   text-align: left;
+  flex-direction: column;
 
   &:hover .btn {
     height: 36px;
@@ -78,7 +79,7 @@
   }
 
   @media (min-width: $tablet-small) {
-    width: 230px;
+    min-width: 230px;
 
     .card-infos {
       .name {

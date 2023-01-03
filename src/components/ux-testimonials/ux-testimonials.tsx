@@ -1,20 +1,20 @@
-import { Component, h, Prop, State } from '@stencil/core';
-import { testimonialsType } from './ux-testimonials-type';
-import icon from '../../assets/icons/testimonials-icon.svg';
+import { Component, h, Prop, State } from '@stencil/core'
+import { testimonialsType } from './ux-testimonials-type'
+import icon from '../../assets/icons/testimonials-icon.svg'
 
 @Component({
   tag: 'ux-testimonials',
   styleUrl: 'ux-testimonials.scss'
 })
 export class UxTestimonials {
-  @State() testimonials: testimonialsType[];
+  @State() testimonials: testimonialsType[]
 
-  @Prop() dataTitle: string;
-  @Prop() dataDescription: string;
-  @Prop() dataTestimonials: string;
+  @Prop() dataTitle: string
+  @Prop() dataDescription: string
+  @Prop() dataTestimonials: string
 
   componentWillLoad() {
-    this.testimonials = JSON.parse(this.dataTestimonials);
+    this.testimonials = JSON.parse(this.dataTestimonials)
   }
 
   render() {
@@ -32,14 +32,14 @@ export class UxTestimonials {
                 <p class="message">{testimonial?.message}</p>
 
                 <div class="customer">
-                  <img src={testimonial.customer?.icon} alt={null} class="customer-icon" />
-                  <h3 class="customer-name">{testimonial.customer?.name}</h3>
+                  <img src={testimonial?.icon} alt={null} class="customer-icon" />
+                  <h3 class="customer-name">{testimonial?.name}</h3>
                 </div>
               </div>
-            );
+            )
           })}
         </div>
       </section>
-    );
+    )
   }
 }

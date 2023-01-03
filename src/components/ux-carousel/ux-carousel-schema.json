@@ -4,32 +4,81 @@
   "category": "Multimídia",
   "settings": [
     {
-      "id": "rewind",
+      "id": "dataRewind",
       "type": "checkbox",
       "tab": "Conteúdo",
       "group": "Conteúdo",
       "label": "Rebobinar carrossel"
     },
     {
-      "id": "autoplay",
+      "id": "dataAutoplay",
       "type": "checkbox",
       "tab": "Conteúdo",
       "group": "Conteúdo",
       "label": "Rodar carrossel automaticamente"
     },
     {
-      "id": "arrows",
+      "id": "dataArrows",
       "type": "checkbox",
       "tab": "Conteúdo",
       "group": "Conteúdo",
       "label": "Flechas do carrossel"
     },
     {
-      "id": "pagination",
+      "id": "dataPagination",
       "type": "checkbox",
       "tab": "Conteúdo",
       "group": "Conteúdo",
       "label": "Seletor de página do carrossel"
     }
-  ]
+  ],
+  "blocks": {
+    "item": {
+      "name": "Item do carrossel",
+      "settings": [
+        {
+          "id": "dataMobileImage",
+          "type": "image_picker",
+          "tab": "Conteúdo",
+          "group": "Conteúdo",
+          "label": "Imagem (mobile)"
+        },
+        {
+          "id": "dataDesktopImage",
+          "type": "image_picker",
+          "tab": "Conteúdo",
+          "group": "Conteúdo",
+          "label": "Imagem (desktop)"
+        },
+        {
+          "id": "dataTitle",
+          "type": "text",
+          "tab": "Conteúdo",
+          "group": "Conteúdo",
+          "label": "Título"
+        },
+        {
+          "id": "dataDescription",
+          "type": "textarea",
+          "tab": "Conteúdo",
+          "group": "Conteúdo",
+          "label": "Descrição"
+        },
+        {
+          "id": "dataButtonLabel",
+          "type": "text",
+          "tab": "Conteúdo",
+          "group": "Conteúdo",
+          "label": "Texto do botão"
+        },
+        {
+          "id": "dataButtonHref",
+          "type": "url",
+          "tab": "Conteúdo",
+          "group": "Conteúdo",
+          "label": "Link do botão"
+        }
+      ]
+    }
+  }
 }

@@ -11,10 +11,11 @@ export namespace Components {
         "dataImages": string;
     }
     interface UxCarousel {
-        "arrows": boolean;
-        "autoplay": boolean;
-        "pagination": boolean;
-        "rewind": boolean;
+        "dataArrows": boolean;
+        "dataAutoplay": boolean;
+        "dataItems": string;
+        "dataPagination": boolean;
+        "dataRewind": boolean;
     }
     interface UxCarouselItem {
         "dataButtonHref"?: string;
@@ -25,6 +26,7 @@ export namespace Components {
         "dataTitle"?: string;
     }
     interface UxShowcase {
+        "dataImages": string;
     }
     interface UxShowcaseItem {
         "dataHasInterest"?: boolean;
@@ -42,12 +44,12 @@ export namespace Components {
         "dataTitle": string;
     }
     interface UxTextImage {
-        "dataButtonHref": string;
-        "dataButtonLabel": string;
-        "dataDescription": string;
-        "dataImage": string;
-        "dataTitle": string;
-        "side": sideType;
+        "dataButtonHref"?: string;
+        "dataButtonLabel"?: string;
+        "dataDescription"?: string;
+        "dataImage"?: string;
+        "dataSide"?: sideType;
+        "dataTitle"?: string;
     }
     interface UxVideo {
         "dataDescription": string;
@@ -120,10 +122,11 @@ declare namespace LocalJSX {
         "dataImages"?: string;
     }
     interface UxCarousel {
-        "arrows"?: boolean;
-        "autoplay"?: boolean;
-        "pagination"?: boolean;
-        "rewind"?: boolean;
+        "dataArrows"?: boolean;
+        "dataAutoplay"?: boolean;
+        "dataItems"?: string;
+        "dataPagination"?: boolean;
+        "dataRewind"?: boolean;
     }
     interface UxCarouselItem {
         "dataButtonHref"?: string;
@@ -134,6 +137,7 @@ declare namespace LocalJSX {
         "dataTitle"?: string;
     }
     interface UxShowcase {
+        "dataImages"?: string;
     }
     interface UxShowcaseItem {
         "dataHasInterest"?: boolean;
@@ -155,8 +159,8 @@ declare namespace LocalJSX {
         "dataButtonLabel"?: string;
         "dataDescription"?: string;
         "dataImage"?: string;
+        "dataSide"?: sideType;
         "dataTitle"?: string;
-        "side"?: sideType;
     }
     interface UxVideo {
         "dataDescription"?: string;
