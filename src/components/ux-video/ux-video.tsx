@@ -1,4 +1,4 @@
-import { Component, h, Prop, State } from '@stencil/core'
+import { Component, h, Prop, State, Watch } from '@stencil/core'
 import { youtubeUrlFormatter } from '../../assets/helpers/youtubeUrlFormatter'
 @Component({
   tag: 'ux-video',
@@ -6,13 +6,17 @@ import { youtubeUrlFormatter } from '../../assets/helpers/youtubeUrlFormatter'
 })
 export class UxVideo {
   @State() video: string
-
   @Prop() dataTitle: string
   @Prop() dataDescription: string
   @Prop() dataSrc: string
 
   componentWillLoad() {
-    this.video = youtubeUrlFormatter(this.dataSrc)
+    this.video = this.dataSrc ? youtubeUrlFormatter(this.dataSrc) : null
+  }
+
+  @Watch('dataSrc')
+  watchPropHandler(newValue: string, oldValue: string) {
+    this.video = newValue && newValue !== oldValue ? youtubeUrlFormatter(newValue) : this.video
   }
 
   render() {
@@ -23,9 +27,7 @@ export class UxVideo {
             <h2 class="title">{this?.dataTitle}</h2>
             <p class="description">{this?.dataDescription}</p>
           </div>
-          <div class="video-container">
-            <iframe src={this.video} width="100%" height="100%" allowFullScreen />
-          </div>
+          <div class="video-container">{this.video && <iframe src={this.video} width="100%" height="100%" allowFullScreen />}</div>
         </div>
       </section>
     )
