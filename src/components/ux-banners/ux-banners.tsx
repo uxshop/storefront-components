@@ -1,4 +1,4 @@
-import { Component, h, Prop, State } from '@stencil/core'
+import { Component, h, Prop, State, Watch } from '@stencil/core'
 import { BannerImages } from './ux-banners-type'
 
 @Component({
@@ -13,18 +13,27 @@ export class UxBanners {
     this.images = JSON.parse(this.dataImages)
   }
 
+  @Watch('dataImages')
+  watchPropHandler(newValue: string) {
+    this.images = JSON.parse(newValue)
+  }
+
   render() {
     return (
       <section class="ux-banners">
-        {this.images.map(image => (
-          <a class="link" href={null}>
-            <picture>
-              <source srcSet={image?.srcMobile} media="(max-width: 1024px)" />
-              <source srcSet={image?.srcDesktop} media="(min-width: 1024px)" />
-              <img class="img" src={image?.srcDesktop || image?.srcMobile} alt={image?.alt} />
-            </picture>
-          </a>
-        ))}
+        {this.images &&
+          this.images.map(
+            image =>
+              (image.srcDesktop || image.srcMobile) && (
+                <a class="link" href={null}>
+                  <picture>
+                    <source srcSet={image?.srcMobile} media="(max-width: 1024px)" />
+                    <source srcSet={image?.srcDesktop} media="(min-width: 1024px)" />
+                    <img class="img" src={image?.srcDesktop || image?.srcMobile} alt={image?.alt} />
+                  </picture>
+                </a>
+              )
+          )}
       </section>
     )
   }
