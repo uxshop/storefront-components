@@ -31,20 +31,20 @@ export class UxTestimonials {
         </div>
         <div class="testimonials-container">
           {this.testimonials &&
-            this.testimonials.map(
-              testimonial =>
-                testimonial.message && (
-                  <div class="testimonial">
-                    <img src={icon} alt={null} class="icon" />
-                    <p class="message">{testimonial?.message}</p>
+            this.testimonials.map(testimonial => (
+              <div class="testimonial">
+                <img src={icon} alt={null} class="icon" />
+                <p class="message">{testimonial?.message}</p>
 
-                    <div class="customer">
-                      <img src={testimonial?.icon} alt={null} class="customer-icon" />
-                      <h3 class="customer-name">{testimonial?.name}</h3>
-                    </div>
+                <div class="customer">
+                  <img src={testimonial?.icon} alt={null} class="customer-icon" />
+                  <div>
+                    <h3>{testimonial?.name}</h3>
+                    <p>{testimonial?.contact}</p>
                   </div>
-                )
-            )}
+                </div>
+              </div>
+            ))}
         </div>
       </section>
     )
