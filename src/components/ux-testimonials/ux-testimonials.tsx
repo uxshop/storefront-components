@@ -1,4 +1,4 @@
-import { Component, h, Prop, State } from '@stencil/core'
+import { Component, h, Prop, State, Watch } from '@stencil/core'
 import { testimonialsType } from './ux-testimonials-type'
 import icon from '../../assets/icons/testimonials-icon.svg'
 
@@ -17,6 +17,11 @@ export class UxTestimonials {
     this.testimonials = JSON.parse(this.dataTestimonials)
   }
 
+  @Watch('dataTestimonials')
+  watchPropHandler(newValue: string) {
+    this.testimonials = JSON.parse(newValue)
+  }
+
   render() {
     return (
       <section class="ux-testimonials">
@@ -25,19 +30,21 @@ export class UxTestimonials {
           <p class="description">{this?.dataDescription}</p>
         </div>
         <div class="testimonials-container">
-          {this.testimonials.map(testimonial => {
-            return (
-              <div class="testimonial">
+          {this.testimonials &&
+            this.testimonials.map(testimonial => (
+              <div key={`${new Date().getTime()}-ux-testimonial`} class="testimonial">
                 <img src={icon} alt={null} class="icon" />
                 <p class="message">{testimonial?.message}</p>
 
                 <div class="customer">
                   <img src={testimonial?.icon} alt={null} class="customer-icon" />
-                  <h3 class="customer-name">{testimonial?.name}</h3>
+                  <div>
+                    <h3>{testimonial?.name}</h3>
+                    <p>{testimonial?.contact}</p>
+                  </div>
                 </div>
               </div>
-            )
-          })}
+            ))}
         </div>
       </section>
     )
