@@ -32,7 +32,7 @@ export class UxTestimonials {
         <div class="testimonials-container">
           {this.testimonials &&
             this.testimonials.map(testimonial => (
-              <div class="testimonial">
+              <div key={`${new Date().getTime()}-ux-testimonial`} class="testimonial">
                 <img src={icon} alt={null} class="icon" />
                 <p class="message">{testimonial?.message}</p>
 

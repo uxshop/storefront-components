@@ -25,7 +25,7 @@ export class UxBanners {
           this.images.map(
             image =>
               (image.srcDesktop || image.srcMobile) && (
-                <a class="link" href={null}>
+                <a key={`${new Date().getTime()}-ux-banner`} class="link" href={null}>
                   <picture>
                     <source srcSet={image?.srcMobile} media="(max-width: 1024px)" />
                     <source srcSet={image?.srcDesktop} media="(min-width: 1024px)" />
