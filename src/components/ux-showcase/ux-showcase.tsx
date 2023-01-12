@@ -14,7 +14,7 @@ export class UxShowcase {
 
   @Prop() dataProducts: string
   @Prop() dataTitle: string
-  @Prop() dataPerPage: number = 4
+  @Prop() dataItemLimit: number = 4
 
   componentWillLoad() {
     this.products = JSON.parse(this.dataProducts)
@@ -24,29 +24,28 @@ export class UxShowcase {
   watchPropHandler(newValue: string) {
     const productList = JSON.parse(newValue)
     this.products = productList
-    this.productsToShow = productList.slice(this.indexControl, this.dataPerPage)
+    this.productsToShow = productList.slice(this.indexControl, this.dataItemLimit)
   }
 
-  @Watch('dataPerPage')
-  watchStateHandler(newValue: number) {
+  @Watch('dataItemLimit')
+  watchdataItemLimitHandler(newValue: number) {
     this.productsToShow = this.products.slice(this.indexControl, newValue)
   }
 
   @Watch('indexControl')
   watchIndexControlHandler(newValue: number) {
-    if (newValue + this.dataPerPage >= this.products.length) {
+    if (newValue + this.dataItemLimit >= this.products.length) {
       this.productsToShow = this.products.slice(newValue)
     } else {
-      this.productsToShow = this.products.slice(newValue, newValue + this.dataPerPage || newValue + 4)
+      this.productsToShow = this.products.slice(newValue, newValue + this.dataItemLimit)
     }
   }
 
   next() {
-    if (this.indexControl + this.dataPerPage < this.products.length) this.indexControl = this.indexControl + 1
+    if (this.indexControl + this.dataItemLimit < this.products.length) this.indexControl = this.indexControl + 1
   }
 
   preview() {
-    console.log(this.indexControl)
     if (this.indexControl) this.indexControl = this.indexControl - 1
   }
 
