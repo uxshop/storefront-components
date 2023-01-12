@@ -2,16 +2,27 @@
 
 .ux-showcase-item {
   display: flex;
+  flex-direction: column;
   min-width: 170px;
   min-height: 290px;
+  max-width: 237px;
+  max-height: 420px;
   font-family: $base-font;
-  cursor: pointer;
   text-align: left;
-  flex-direction: column;
+  padding: $padding-small;
+  border-radius: $border-radius-sm;
 
-  &:hover .btn {
-    height: 36px;
-    color: white;
+  &:hover {
+    box-shadow: 10px 10px 5px rgba($color: #000000, $alpha: 0.1);
+    border: solid 1px $light-border-default;
+    transform: scale(1.1, 1.1);
+    transition: all 0.3s;
+
+    .btn {
+      height: 36px;
+      color: white;
+      background-color: #55cbaf;
+    }
   }
 
   .image-container {
@@ -23,7 +34,7 @@
       object-fit: cover;
       max-width: 100%;
       height: 100%;
-      border-radius: 6px;
+      border-radius: $border-radius-sm;
     }
   }
 
@@ -31,6 +42,7 @@
     background-color: #4fbfa4;
     color: transparent;
     text-decoration: none;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,12 +52,8 @@
     left: 0;
     right: 0;
     transition: height 0.3s;
-    border-radius: 6px;
+    border-radius: $border-radius-sm;
     height: 0px;
-  }
-
-  .btn:hover {
-    background-color: #55cbaf;
   }
 
   .card-infos {
@@ -93,7 +101,7 @@
         .prices {
           flex-direction: row;
           align-items: flex-end;
-          gap: 8px;
+          gap: $gap-extra-small;
 
           .price {
             font-size: 18px;

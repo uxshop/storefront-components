@@ -1,10 +1,26 @@
 {
+  "id": "vitrine-123",
   "name": "Vitrine de produtos",
   "type": "content",
   "category": "Multimídia",
+  "settings": [
+    {
+      "id": "dataTitle",
+      "type": "text",
+      "tab": "Conteúdo",
+      "group": "Conteúdo",
+      "label": "Título da vitrine"
+    },
+    {
+      "id": "dataItemLimit",
+      "type": "text",
+      "tab": "Conteúdo",
+      "group": "Conteúdo",
+      "label": "Quantidade de itens na vitrine"
+    }
+  ],
   "blocks": {
-    "product": {
-      "name": "Produto",
+    "showcase": {
       "settings": [
         {
           "id": "dataHref",
@@ -54,13 +70,6 @@
           "tab": "Conteúdo",
           "group": "Conteúdo",
           "label": "Valor das parcelas do produto"
-        },
-        {
-          "id": "dataHasInterest",
-          "type": "toggle",
-          "tab": "Conteúdo",
-          "group": "Conteúdo",
-          "label": "Juros nas parcelas do produto"
         }
       ]
     }
