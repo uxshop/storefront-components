@@ -1,7 +1,6 @@
 import { Component, h, Prop, State, Watch } from '@stencil/core'
 import { ShowcaseItem } from '../ux-showcase-item/ux-showcase-item-type'
-import arrowLeft from '../../assets/icons/arrow-left.svg'
-import arrowRight from '../../assets/icons/arrow-right.svg'
+import iconEnum from '../ui-icon/iconEnum'
 
 @Component({
   tag: 'ux-showcase',
@@ -28,7 +27,7 @@ export class UxShowcase {
   }
 
   @Watch('dataItemLimit')
-  watchdataItemLimitHandler(newValue: number) {
+  watchDataItemLimitHandler(newValue: number) {
     this.productsToShow = this.products.slice(this.indexControl, newValue)
   }
 
@@ -58,7 +57,7 @@ export class UxShowcase {
 
         <div class="showcase-container">
           <button class="control" onClick={() => this.preview()}>
-            <img src={arrowLeft} alt={null} class="icon" />
+            <ui-icon class="icon" dataIconName={iconEnum.arrowLeft} dataColor="#5DB3D8" />
           </button>
 
           <div class="itens-container">
@@ -78,7 +77,7 @@ export class UxShowcase {
           </div>
 
           <button class="control" onClick={() => this.next()}>
-            <img src={arrowRight} alt={null} class="icon" />
+            <ui-icon class="icon" dataIconName={iconEnum.arrowRight} dataColor="#5DB3D8" />
           </button>
         </div>
       </section>
