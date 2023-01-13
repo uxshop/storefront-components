@@ -1,6 +1,6 @@
 import { Component, h, Host, Prop, State, Watch } from '@stencil/core'
 import icons from '../../assets/icons/icons.json'
-import { iconEnum } from './iconEnum'
+import { iconEnum } from './ui-icon-enum'
 
 @Component({
   tag: 'ui-icon'

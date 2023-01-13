@@ -6,17 +6,17 @@ import { sideType } from './ux-text-image-type'
   styleUrl: 'ux-text-image.scss'
 })
 export class UxTextImage {
-  @Prop() dataImage?: string
-  @Prop() dataTitle?: string
-  @Prop() dataDescription?: string
+  @Prop() dataTitle: string
+  @Prop() dataDescription: string
+  @Prop() dataImage: string
   @Prop() dataButtonHref?: string
-  @Prop() dataButtonLabel?: string
-  @Prop() dataSide?: sideType
+  @Prop() dataButtonLabel: string
+  @Prop() dataPosition?: sideType
 
   render() {
     return (
       <section class="ux-text-image">
-        <div class={`container${this.dataSide ? ` ${this.dataSide}` : ' left'}`}>
+        <div class={`container${this.dataPosition ? ` ${this.dataPosition}` : ' left'}`}>
           <div class="image-container">
             <img src={this.dataImage} alt={this.dataTitle} class="img" loading="lazy" />
           </div>

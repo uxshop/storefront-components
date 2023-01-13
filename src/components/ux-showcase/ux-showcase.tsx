@@ -1,6 +1,6 @@
 import { Component, h, Prop, State, Watch } from '@stencil/core'
+import { iconEnum } from '../ui-icon/ui-icon-enum'
 import { ShowcaseItem } from '../ux-showcase-item/ux-showcase-item-type'
-import { iconEnum } from '../ui-icon/iconEnum'
 
 @Component({
   tag: 'ux-showcase',

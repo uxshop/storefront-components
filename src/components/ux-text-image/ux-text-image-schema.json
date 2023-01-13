@@ -39,7 +39,7 @@
       "label": "Link do botão"
     },
     {
-      "id": "dataSide",
+      "id": "dataPosition",
       "type": "select",
       "tab": "Conteúdo",
       "group": "Conteúdo",
