@@ -10,8 +10,8 @@ export class UxTextImage {
   @Prop() dataSubtitle: string
   @Prop() dataDescription: string
   @Prop() dataImage: string
-  @Prop() dataButtonHref?: string
   @Prop() dataButtonLabel: string
+  @Prop() dataButtonHref?: string
   @Prop() dataPosition?: sideType
 
   render() {
