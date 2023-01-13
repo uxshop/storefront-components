@@ -5,4 +5,5 @@ export interface CarouselItem {
   dataButtonHref?: string
   dataDesktopImage?: string
   dataMobileImage?: string
+  dataImageAlt?: string
 }

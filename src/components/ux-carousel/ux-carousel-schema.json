@@ -1,4 +1,5 @@
 {
+  "id": "carousel-123",
   "name": "Carrossel",
   "type": "content",
   "category": "Multimídia",
@@ -33,8 +34,8 @@
     }
   ],
   "blocks": {
-    "item": {
-      "name": "Item do carrossel",
+    "image": {
+      "name": "Imagem",
       "settings": [
         {
           "id": "dataMobileImage",
@@ -55,14 +56,21 @@
           "type": "text",
           "tab": "Conteúdo",
           "group": "Conteúdo",
-          "label": "Título"
+          "label": "Título da imagem"
         },
         {
           "id": "dataDescription",
-          "type": "textarea",
+          "type": "text",
           "tab": "Conteúdo",
           "group": "Conteúdo",
-          "label": "Descrição"
+          "label": "Descrição da imagem"
+        },
+        {
+          "id": "dataImageAlt",
+          "type": "text",
+          "tab": "Conteúdo",
+          "group": "Conteúdo",
+          "label": "Descrição alternativa da imagem"
         },
         {
           "id": "dataButtonLabel",
@@ -73,7 +81,7 @@
         },
         {
           "id": "dataButtonHref",
-          "type": "url",
+          "type": "text",
           "tab": "Conteúdo",
           "group": "Conteúdo",
           "label": "Link do botão"
