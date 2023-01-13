@@ -7,6 +7,7 @@ import { sideType } from './ux-text-image-type'
 })
 export class UxTextImage {
   @Prop() dataTitle: string
+  @Prop() dataSubtitle: string
   @Prop() dataDescription: string
   @Prop() dataImage: string
   @Prop() dataButtonHref?: string
@@ -22,7 +23,10 @@ export class UxTextImage {
           </div>
           <div class="infos">
             <h2 class="title">{this.dataTitle}</h2>
-            <p class="description">{this.dataDescription}</p>
+            <p class="description">
+              <b>{this.dataSubtitle}</b>
+              {this.dataDescription}
+            </p>
             {this.dataButtonLabel && (
               <a target="_blank" rel="noreferrer noopener" href={this.dataButtonHref} class="button">
                 {this.dataButtonLabel}

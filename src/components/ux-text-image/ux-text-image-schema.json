@@ -18,6 +18,13 @@
       "label": "Título"
     },
     {
+      "id": "dataSubtitle",
+      "type": "text",
+      "tab": "Conteúdo",
+      "group": "Conteúdo",
+      "label": "Subtítulo"
+    },
+    {
       "id": "dataDescription",
       "type": "textarea",
       "tab": "Conteúdo",
