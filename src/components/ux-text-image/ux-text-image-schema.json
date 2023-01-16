@@ -18,6 +18,13 @@
       "label": "Título"
     },
     {
+      "id": "dataSubtitle",
+      "type": "text",
+      "tab": "Conteúdo",
+      "group": "Conteúdo",
+      "label": "Subtítulo"
+    },
+    {
       "id": "dataDescription",
       "type": "textarea",
       "tab": "Conteúdo",
@@ -39,7 +46,7 @@
       "label": "Link do botão"
     },
     {
-      "id": "dataSide",
+      "id": "dataPosition",
       "type": "select",
       "tab": "Conteúdo",
       "group": "Conteúdo",

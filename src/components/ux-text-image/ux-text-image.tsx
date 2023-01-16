@@ -6,23 +6,27 @@ import { sideType } from './ux-text-image-type'
   styleUrl: 'ux-text-image.scss'
 })
 export class UxTextImage {
-  @Prop() dataImage?: string
-  @Prop() dataTitle?: string
-  @Prop() dataDescription?: string
+  @Prop() dataTitle: string
+  @Prop() dataSubtitle: string
+  @Prop() dataDescription: string
+  @Prop() dataImage: string
+  @Prop() dataButtonLabel: string
   @Prop() dataButtonHref?: string
-  @Prop() dataButtonLabel?: string
-  @Prop() dataSide?: sideType
+  @Prop() dataPosition?: sideType
 
   render() {
     return (
       <section class="ux-text-image">
-        <div class={`container${this.dataSide ? ` ${this.dataSide}` : ' left'}`}>
+        <div class={`container${this.dataPosition ? ` ${this.dataPosition}` : ' left'}`}>
           <div class="image-container">
             <img src={this.dataImage} alt={this.dataTitle} class="img" loading="lazy" />
           </div>
           <div class="infos">
             <h2 class="title">{this.dataTitle}</h2>
-            <p class="description">{this.dataDescription}</p>
+            <p class="description">
+              <b>{this.dataSubtitle}</b>
+              {this.dataDescription}
+            </p>
             {this.dataButtonLabel && (
               <a target="_blank" rel="noreferrer noopener" href={this.dataButtonHref} class="button">
                 {this.dataButtonLabel}
