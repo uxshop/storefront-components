@@ -10,9 +10,8 @@ export class UxCarousel {
   @Prop() dataRewind?: boolean = false
   @Prop() dataAutoplay?: boolean = false
   @Prop() dataArrows?: boolean = false
-  @Prop() dataPagination?: boolean = false
 
-  @State() items: CarouselItem[]
+  @State() items: CarouselItem[] = []
 
   componentWillLoad() {
     this.items = JSON.parse(this.dataItems)
@@ -28,9 +27,9 @@ export class UxCarousel {
       rewind: Boolean(this?.dataRewind),
       autoplay: Boolean(this?.dataAutoplay),
       arrows: Boolean(this?.dataArrows),
-      pagination: Boolean(this?.dataPagination),
+      pagination: false,
       breakpoints: {
-        768: {
+        520: {
           arrows: false
         }
       }
@@ -51,6 +50,11 @@ export class UxCarousel {
                   dataButtonHref={item.dataButtonHref}
                   dataDesktopImage={item.dataDesktopImage}
                   dataMobileImage={item.dataMobileImage}
+                  dataImageAlt={item.dataImageAlt}
+                  dataButtonColor={item.dataButtonColor}
+                  dataFontColor={item.dataFontColor}
+                  dataFontButtonColor={item.dataFontButtonColor}
+                  dataShouldCenterInfos={item.dataShouldCenterInfos}
                 />
               </li>
             ))}
