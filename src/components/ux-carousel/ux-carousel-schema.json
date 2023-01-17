@@ -1,4 +1,5 @@
 {
+  "id": "carousel-123",
   "name": "Carrossel",
   "type": "content",
   "category": "Multimídia",
@@ -23,18 +24,11 @@
       "tab": "Conteúdo",
       "group": "Conteúdo",
       "label": "Flechas do carrossel"
-    },
-    {
-      "id": "dataPagination",
-      "type": "checkbox",
-      "tab": "Conteúdo",
-      "group": "Conteúdo",
-      "label": "Seletor de página do carrossel"
     }
   ],
   "blocks": {
-    "item": {
-      "name": "Item do carrossel",
+    "image": {
+      "name": "Imagem",
       "settings": [
         {
           "id": "dataMobileImage",
@@ -55,14 +49,21 @@
           "type": "text",
           "tab": "Conteúdo",
           "group": "Conteúdo",
-          "label": "Título"
+          "label": "Título da imagem"
         },
         {
           "id": "dataDescription",
-          "type": "textarea",
+          "type": "text",
           "tab": "Conteúdo",
           "group": "Conteúdo",
-          "label": "Descrição"
+          "label": "Descrição da imagem"
+        },
+        {
+          "id": "dataImageAlt",
+          "type": "text",
+          "tab": "Conteúdo",
+          "group": "Conteúdo",
+          "label": "Descrição alternativa da imagem"
         },
         {
           "id": "dataButtonLabel",
@@ -73,10 +74,38 @@
         },
         {
           "id": "dataButtonHref",
-          "type": "url",
+          "type": "text",
           "tab": "Conteúdo",
           "group": "Conteúdo",
           "label": "Link do botão"
+        },
+        {
+          "id": "dataShouldCenterInfos",
+          "type": "checkbox",
+          "tab": "Conteúdo",
+          "group": "Conteúdo",
+          "label": "Centralizar informações"
+        },
+        {
+          "id": "dataFontColor",
+          "type": "color_picker",
+          "tab": "Cores",
+          "group": "Informações",
+          "label": "Cor da fonte"
+        },
+        {
+          "id": "dataButtonColor",
+          "type": "color_picker",
+          "tab": "Cores",
+          "group": "Botão",
+          "label": "Cor de fundo"
+        },
+        {
+          "id": "dataFontButtonColor",
+          "type": "color_picker",
+          "tab": "Cores",
+          "group": "Botão",
+          "label": "Cor texto"
         }
       ]
     }
