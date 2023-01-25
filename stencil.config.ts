@@ -1,5 +1,5 @@
-import { Config } from '@stencil/core';
-import { sass } from '@stencil/sass';
+import { Config } from '@stencil/core'
+import { sass } from '@stencil/sass'
 
 export const config: Config = {
   namespace: 'storefrontcomponents',
@@ -19,5 +19,9 @@ export const config: Config = {
       serviceWorker: null // disable service workers
     }
   ],
-  plugins: [sass()]
-};
+  plugins: [
+    sass({
+      injectGlobalPaths: ['src/assets/styles/_breakpoint.scss', 'src/assets/styles/_variables.scss']
+    })
+  ]
+}
