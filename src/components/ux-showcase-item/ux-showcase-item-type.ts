@@ -6,4 +6,5 @@ export interface ShowcaseItem {
   dataPriceCompare: number
   dataParcels?: number
   dataParcelPrice?: number
+  active?: boolean
 }
