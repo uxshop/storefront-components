@@ -21,7 +21,7 @@ export const config: Config = {
   ],
   plugins: [
     sass({
-      injectGlobalPaths: ['src/assets/styles/_breakpoint.scss', 'src/assets/styles/_variables.scss']
+      injectGlobalPaths: ['src/assets/styles']
     })
   ]
 }
