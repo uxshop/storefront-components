@@ -33,11 +33,15 @@ export class UxTestimonials {
           {this.testimonials &&
             this.testimonials.map(testimonial => (
               <div key={`${new Date().getTime()}-ux-testimonial`} class="testimonial">
-                <img src={icon} alt={null} class="icon" />
+                <div class="icon-container">
+                  <img src={icon} alt={null} />
+                </div>
                 <p class="message">{testimonial?.message}</p>
 
                 <div class="customer">
-                  <img src={testimonial?.icon} alt={null} class="customer-icon" />
+                  <div class="customer-image-container">
+                    <img src={testimonial?.icon} alt={null} class="customer-icon" />
+                  </div>
                   <div>
                     <h3>{testimonial?.name}</h3>
                     <p>{testimonial?.contact}</p>
