@@ -67,7 +67,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #ffffff;
+        background-color: $white;
         border-radius: $border-radius-rounded;
         border: none;
         width: 40px;
@@ -79,14 +79,22 @@
         }
 
         .icon svg path {
-          fill: #00b2ff;
+          fill: $action-primary-hovered;
         }
 
         &:hover {
           transition: background-color 0.5s ease;
-          background-color: #00b2ff;
+          background-color: $action-primary-hovered;
           .icon svg path {
-            fill: #ffffff;
+            fill: $white;
+          }
+
+          &:disabled {
+            background-color: $light-background-disable;
+
+            .icon svg path {
+              fill: $white;
+            }
           }
         }
       }

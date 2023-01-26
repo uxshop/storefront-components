@@ -24,7 +24,7 @@ $gap-large: 50px;
 $gap-extra-large: 110px;
 
 //font-family
-$base-font: Montserrat, sans-serif;
+$base-font: sans-serif;
 
 //font-size
 $font-title-desk: 40px;
@@ -47,5 +47,8 @@ $border-radius-md: 8px;
 $border-radius-rounded: 100%;
 
 //colors
+$white:  #ffffff;
 $light-border-default: #dee2e6;
 $success-button-background-color: #55cbaf;
+$light-background-disable:  rgba(128, 128, 128, 0.2);
+$action-primary-hovered: #1B7BC0;

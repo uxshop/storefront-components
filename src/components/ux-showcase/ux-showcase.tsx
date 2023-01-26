@@ -8,6 +8,7 @@ import { ShowcaseItem } from '../ux-showcase-item/ux-showcase-item-type'
 })
 export class UxShowcase {
   @State() products: ShowcaseItem[]
+  @State() disableButtonControl: { preview: boolean; next: boolean } = { preview: true, next: false }
 
   @Prop() dataProducts: string
   @Prop() dataTitle: string
@@ -37,21 +38,29 @@ export class UxShowcase {
   next() {
     const firstActive = this.products.findIndex(item => item.active)
     const listProducts = this.products
+    const shouldDisableNextButton = firstActive + this.dataItemLimit >= this.products.length
 
-    if (firstActive + this.dataItemLimit >= this.products.length) return // TODO: Colocar feedback no btn com desable next ou algo assim
-    listProducts[firstActive].active = false
-    listProducts[firstActive + this.dataItemLimit].active = true
-    this.products = [...listProducts]
+    if (shouldDisableNextButton) {
+      this.disableButtonControl = { preview: false, next: true }
+    } else {
+      listProducts[firstActive].active = false
+      listProducts[firstActive + this.dataItemLimit].active = true
+      this.products = [...listProducts]
+    }
   }
 
   preview() {
     const firstActive = this.products.findIndex(item => item.active)
     const listProducts = this.products
+    const shouldDisablePreviewButton = firstActive - 1 < 0
 
-    if (firstActive - 1 < 0) return // TODO: Colocar feedback no btn com desable next ou algo assim
-    listProducts[firstActive - 1].active = true
-    listProducts[firstActive + this.dataItemLimit - 1].active = false
-    this.products = [...listProducts]
+    if (shouldDisablePreviewButton) {
+      this.disableButtonControl = { preview: true, next: false }
+    } else {
+      listProducts[firstActive - 1].active = true
+      listProducts[firstActive + this.dataItemLimit - 1].active = false
+      this.products = [...listProducts]
+    }
   }
 
   render() {
@@ -62,7 +71,7 @@ export class UxShowcase {
         </div>
         {!!this.products?.length && (
           <div class="showcase-container">
-            <button class="control" onClick={() => this.preview()}>
+            <button class="control" onClick={() => this.preview()} disabled={this.disableButtonControl.preview}>
               <ui-icon class="icon" dataIconName={iconEnum.arrowLeft} dataColor="#5DB3D8" />
             </button>
 
@@ -83,7 +92,7 @@ export class UxShowcase {
                 ))}
             </ul>
 
-            <button class="control" onClick={() => this.next()}>
+            <button class="control" onClick={() => this.next()} disabled={this.disableButtonControl.next}>
               <ui-icon class="icon" dataIconName={iconEnum.arrowRight} dataColor="#5DB3D8" />
             </button>
           </div>
