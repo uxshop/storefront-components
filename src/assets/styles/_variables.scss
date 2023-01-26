@@ -10,7 +10,6 @@ $desktop-medium: 1366px;
 $desktop-large: 1440px;
 
 // padding
-
 $padding-extra-small: 10px;
 $padding-small: 20px;
 $padding-medium: 30px;
@@ -25,13 +24,20 @@ $gap-large: 50px;
 $gap-extra-large: 110px;
 
 //font-family
-$base-font: sans-serif;
+$base-font: Montserrat, sans-serif;
 
 //font-size
 $font-title-desk: 40px;
-$font-title-mob: 24px;
 $font-text-desk: 18px;
+$font-text-desk-md: 16px;
+
+$font-title-mob: 24px;
+$font-title-mob-md: 18px;
+$font-title-mob-sm: 16px;
+
 $font-text-mob: 14px;
+$font-text-mob-md: 12px;
+$font-text-mob-sm: 10px;
 
 //borders
 $border-radius-none: 0px;
@@ -40,4 +46,6 @@ $border-radius-sm: 4px;
 $border-radius-md: 8px;
 $border-radius-rounded: 100%;
 
-$light-border-default: #DEE2E6
+//colors
+$light-border-default: #dee2e6;
+$success-button-background-color: #55cbaf;
