@@ -23,22 +23,24 @@ export class UxShowcaseItem {
             comprar
           </a>
         </div>
-        <div class="card-infos">
-          <p class="name">{this.dataName}</p>
-          <div class="payment">
-            {this.dataPrice && (
-              <div class="prices">
-                {this.dataPriceCompare && <span class="price-compare">{currencyFormatter(this.dataPriceCompare)}</span>}
-                <span class="price">{currencyFormatter(this.dataPrice)}</span>
-              </div>
-            )}
-            {this.dataParcels && this.dataParcelPrice && (
-              <span class="price-installments">
-                até {this.dataParcels}x de {currencyFormatter(this.dataParcelPrice)} sem juros
-              </span>
-            )}
+        {!!this.dataName && (
+          <div class="card-infos">
+            <p class="name">{this.dataName}</p>
+            <div class="payment">
+              {this.dataPrice && (
+                <div class="prices">
+                  {this.dataPriceCompare && <span class="price-compare">{currencyFormatter(this.dataPriceCompare)}</span>}
+                  <span class="price"> {currencyFormatter(this.dataPrice)}</span>
+                </div>
+              )}
+              {this.dataParcels && this.dataParcelPrice && (
+                <p class="price-installments">
+                  até {this.dataParcels}x de {currencyFormatter(this.dataParcelPrice)} sem juros
+                </p>
+              )}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     )
   }

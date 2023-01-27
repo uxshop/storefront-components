@@ -1,59 +1,103 @@
-@import '../../assets/styles/variables';
-
 .ux-showcase {
-  width: 100%;
-  padding: $padding-medium;
-  gap: $gap-small $gap-extra-small;
+  ul,
+  li {
+    list-style-type: none;
+  }
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  padding: $padding-extra-small;
+  font-family: $base-font;
+
+  @include responsive(tablet) {
+    gap: $gap-small $gap-extra-small;
+    flex-wrap: wrap;
+    padding: $padding-small $padding-medium;
+  }
 
   .infos {
     display: flex;
     flex-direction: column;
+    text-align: center;
 
     .title {
-      font-size: $font-title-mob;
+      margin: 30px 0;
+      font-size: $font-title-mob-md;
+
+      @include responsive(tablet) {
+        font-size: $font-title-mob;
+      }
     }
   }
 
   .showcase-container {
     display: flex;
     align-items: center;
-    margin: 30px;
+    margin: 0;
 
     .control {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #ffffff;
-      border-radius: $border-radius-rounded;
-      border: none;
-      width: 40px;
-      height: 40px;
-
-      .icon {
-        width: 10px;
-        height: 16px;
-      }
-
-      .icon svg path {
-        fill: #00b2ff;
-      }
-
-      &:hover {
-        background-color: #00b2ff;
-        .icon svg path {
-          fill: #ffffff;
-        }
-      }
+      display: none;
     }
 
-    .itens-container {
+    .items-container {
+      margin: 0;
+      padding: 0;
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: baseline;
       gap: $gap-extra-small;
+    }
+
+    @include responsive(tablet) {
+      .items-container {
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: baseline;
+        gap: $gap-extra-small;
+      }
+
+      .inactive {
+        display: none;
+      }
+
+      .control {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $white;
+        border-radius: $border-radius-rounded;
+        border: none;
+        width: 40px;
+        height: 40px;
+
+        .icon {
+          width: 16px;
+          height: 16px;
+        }
+
+        .icon svg path {
+          fill: $action-primary-hovered;
+        }
+
+        &:hover {
+          transition: background-color 0.5s ease;
+          background-color: $action-primary-hovered;
+          .icon svg path {
+            fill: $white;
+          }
+
+          &:disabled {
+            background-color: $light-background-disable;
+
+            .icon svg path {
+              fill: $white;
+            }
+          }
+        }
+      }
     }
   }
 }
