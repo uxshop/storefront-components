@@ -30,7 +30,7 @@ export class UxShowcaseItem {
               {this.dataPrice && (
                 <div class="prices">
                   {this.dataPriceCompare && <span class="price-compare">{currencyFormatter(this.dataPriceCompare)}</span>}
-                  <span class="price"> &nbsp; {currencyFormatter(this.dataPrice)}</span>
+                  <span class="price"> {currencyFormatter(this.dataPrice)}</span>
                 </div>
               )}
               {this.dataParcels && this.dataParcelPrice && (
