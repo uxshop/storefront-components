@@ -32,6 +32,10 @@
       .description {
         font-size: $font-text-mob;
         line-height: 160%;
+
+        & b {
+          margin-right: 3px;
+        }
       }
     }
 
