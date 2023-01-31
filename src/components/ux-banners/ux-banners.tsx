@@ -25,11 +25,11 @@ export class UxBanners {
           this.images.map(
             image =>
               (image.srcDesktop || image.srcMobile) && (
-                <a key={`${new Date().getTime()}-ux-banner`} class="link" href={image?.href}>
+                <a key={`${new Date().getTime()}-ux-banner`} class="ux-banners-link" href={image?.href}>
                   <picture>
-                    <source srcSet={image?.srcMobile} media="(max-width: 1024px)" />
-                    <source srcSet={image?.srcDesktop} media="(min-width: 1024px)" />
-                    <img class="img" src={image?.srcDesktop || image?.srcMobile} alt={image?.alt} />
+                    <source srcSet={image?.srcMobile} media="(max-width: 768px)" />
+                    <source srcSet={image?.srcDesktop} media="(min-width: 769px)" />
+                    <img class="ux-banners-link-img" src={image?.srcDesktop || image?.srcMobile} />
                   </picture>
                 </a>
               )

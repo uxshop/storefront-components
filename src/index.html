@@ -1,42 +1,34 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
-    <title>Stencil Component Starter</title>
 
-    <script type="module" src="/build/storefrontcomponents.esm.js"></script>
-    <script nomodule src="/build/storefrontcomponents.js"></script>
-  </head>
-  <body>
-    <ux-banners
-      data-images='[{"srcMobile": "https://cdn.dooca.store/2617/files/b3-1.jpg", "srcDesktop": "https://cdn.dooca.store/2617/files/hero2.jpg"}, {"srcMobile": "https://cdn.dooca.store/2617/files/b3-1.jpg", "srcDesktop": "https://cdn.dooca.store/2617/files/hero2.jpg"}]'
-    ></ux-banners>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <title>Stencil Component Starter</title>
 
-    <ux-text-image
-      data-image="https://www.dooca.com.br/assets/img/home/sua-loja-pronta-em-3-passos-800.webp"
-      data-title="Seus produtos na sacolinha do Instagram ou no Google Shopping"
-      data-description="Vamos ajudar você a exibir seus produtos na sacolinha do Instagram ou no Google Shopping. As duas ferramentas são gratuitas e vãoi ajudar clientes em potencial, acessar a sua loja para comprar os seus produtos"
-      data-button-label="Quero começar agora"
-      data-button-href="#"
-      side="left"
-    ></ux-text-image>
+  <script type="module" src="/build/storefrontcomponents.esm.js"></script>
+  <script nomodule src="/build/storefrontcomponents.js"></script>
+</head>
 
-    <ux-video
-      data-title="+ de 30 mil lojas virtuais já foram criadas com a Dooca"
-      data-description="Conheça algumas lojas virtuais de sucesso"
-      data-src="https://youtu.be/YD5hBvZ9fFo"
-    ></ux-video>
+<body>
+  <ux-banners
+    data-images='[{"srcMobile": "https://cdn.dooca.store/2617/files/b3-1.jpg", "srcDesktop": "https://cdn.dooca.store/2617/files/hero2.jpg"}, {"srcMobile": "https://cdn.dooca.store/2617/files/b3-1.jpg", "srcDesktop": "https://cdn.dooca.store/2617/files/hero2.jpg"}]'></ux-banners>
 
-    <ux-showcase
+  <ux-text-image data-image="https://www.dooca.com.br/assets/img/home/sua-loja-pronta-em-3-passos-800.webp"
+    data-title="Seus produtos na sacolinha do Instagram ou no Google Shopping"
+    data-description="Vamos ajudar você a exibir seus produtos na sacolinha do Instagram ou no Google Shopping. As duas ferramentas são gratuitas e vãoi ajudar clientes em potencial, acessar a sua loja para comprar os seus produtos"
+    data-button-label="Quero começar agora" data-button-href="#" side="left"></ux-text-image>
+
+  <ux-video data-title="+ de 30 mil lojas virtuais já foram criadas com a Dooca"
+    data-description="Conheça algumas lojas virtuais de sucesso" data-src="https://youtu.be/YD5hBvZ9fFo"></ux-video>
+
+  <ux-showcase
     data-products='[{"dataHref": "#", "dataImage": "https://cdn.dooca.store/2612/products/oculos-f-2-1_580x756+fill_ffffff.jpg?v=1617658419", "dataName": "Produto de teste1111", "dataPrice": "100.98", "dataPriceCompare": "199.99", "dataParcels": "10", "dataParcelPrice": "9.90"},{"dataHref": "#", "dataImage": "https://cdn.dooca.store/2612/products/oculos-f-2-1_580x756+fill_ffffff.jpg?v=1617658419", "dataName": "Produto de teste2222", "dataPrice": "100.98", "dataPriceCompare": "199.99", "dataParcels": "10", "dataParcelPrice": "9.90"},{"dataHref": "#", "dataImage": "https://cdn.dooca.store/2612/products/oculos-f-2-1_580x756+fill_ffffff.jpg?v=1617658419", "dataName": "Produto de teste3333", "dataPrice": "100.98", "dataPriceCompare": "199.99", "dataParcels": "10", "dataParcelPrice": "9.90"}, {"dataHref": "#", "dataImage": "https://cdn.dooca.store/2612/products/oculos-f-2-1_580x756+fill_ffffff.jpg?v=1617658419", "dataName": "Produto de teste4444", "dataPrice": "100.98", "dataPriceCompare": "199.99", "dataParcels": "10", "dataParcelPrice": "9.90"},{"dataHref": "#", "dataImage": "https://cdn.dooca.store/2612/products/oculos-f-2-1_580x756+fill_ffffff.jpg?v=1617658419", "dataName": "Produto de teste5555", "dataPrice": "100.98", "dataPriceCompare": "199.99", "dataParcels": "10", "dataParcelPrice": "9.90"},{"dataHref": "#", "dataImage": "https://cdn.dooca.store/2612/products/oculos-f-2-1_580x756+fill_ffffff.jpg?v=1617658419", "dataName": "Produto de teste6666", "dataPrice": "100.98", "dataPriceCompare": "199.99", "dataParcels": "10", "dataParcelPrice": "9.90"}]'
     data-title="Nome maneiro">
   </ux-showcase>
 
-    <ux-testimonials
-      data-title="Veja as avaliações de nossos clientes"
-      data-description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard"
-      data-testimonials='[{"customer": {"name": "Roberta Toledo","icon": "https://www.dooca.com.br/assets/img/home/roberta-toledo.webp"},"message": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book"},{"customer": {"name": "Roberta Toledo","icon": "https://www.dooca.com.br/assets/img/home/roberta-toledo.webp"},"message": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book"},{"customer": {"name": "Roberta Toledo","icon": "https://www.dooca.com.br/assets/img/home/roberta-toledo.webp"},"message": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book"},{"customer": {"name": "Roberta Toledo","icon": "https://www.dooca.com.br/assets/img/home/roberta-toledo.webp"},"message": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book"}]'
-    ></ux-testimonials>
+  <ux-testimonials data-title="Veja as avaliações de nossos clientes"
+    data-description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard"
+    data-testimonials='[{"name": "Roberta Toledo","icon": "https://www.dooca.com.br/assets/img/home/roberta-toledo.webp", "message": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book","contact": "roberta.toledo@example.com"},{"name": "Roberta Toledo","icon": "https://www.dooca.com.br/assets/img/home/roberta-toledo.webp", "message": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book","contact": "roberta.toledo@example.com"},{"name": "Roberta Toledo","icon": "https://www.dooca.com.br/assets/img/home/roberta-toledo.webp", "message": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book","contact": "roberta.toledo@example.com"},{"name": "Roberta Toledo","icon": "https://www.dooca.com.br/assets/img/home/roberta-toledo.webp", "message": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book","contact": "roberta.toledo@example.com"}]'></ux-testimonials>
 
 </html>
